@@ -1,8 +1,8 @@
-define(["jquery","text!modules/str/guidance.html"],
-    function($,html){
+define(["jquery","pageUrl","text!modules/str/guidance.html"],
+    function($,pageUrl,html){
     function render() {
         $(".main").html(html);
-        console.log($)
+        console.log(pageUrl.render())
         $(".main").on("click",function () {
             window.location.href="#Loginphone"
         })

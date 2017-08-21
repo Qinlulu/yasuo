@@ -11,7 +11,8 @@ require.config({
         'megapix':'https://imagecdn.xinyongjinku.com/wechat/lib/megapiximage',
         "guidance":"modules/js/guidance",
         "Loginphone":"modules/js/Loginphone",
-
+        "pageUrl":"modules/js/pageUrl",
+        "Loginpassword":"modules/js/Loginpassword",
     }
 })
 

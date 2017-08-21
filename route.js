@@ -2,7 +2,8 @@ define(["backbone","require"],function(){
     var Router = Backbone.Router.extend({
         routes: {
             "guidance":"guidance",
-            "Loginphone":"Loginphone"
+            "Loginphone":"Loginphone",
+            "Loginpassword":"Loginpassword",
         },
         guidance:function () {
             require(["guidance"], function (guidance) {
@@ -12,6 +13,11 @@ define(["backbone","require"],function(){
         Loginphone:function () {
             require(["Loginphone"], function (Loginphone) {
                 Loginphone.render();
+            })
+        },
+        Loginpassword:function () {
+            require(["Loginpassword"], function (Loginpassword) {
+                Loginpassword.render();
             })
         }
     });

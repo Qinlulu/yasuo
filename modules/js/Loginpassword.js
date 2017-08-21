@@ -1,4 +1,4 @@
-define(["jquery","pageUrl","text!modules/str/Loginphone.html"],
+define(["jquery","pageUrl","text!modules/str/Loginpassword.html"],
     function($,pageUrl,html){
         function render() {
             $(".main").html(html);
