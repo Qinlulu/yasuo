@@ -271,11 +271,11 @@ define(["jquery","pageUrl", "touch", "PublicFooter",
                             })
                             $(".renzhengs .lists span").eq(1).on("click", function() {
                                 $(".renzhengs").hide()
-                                window.location.href = "#CertifiedIdentityCard"
+                                window.location.href = "#AuthenticationIdentityCard"
                             })
 
                         } else {
-                            window.location.href = "#CertifiedIdentityCard"
+                            window.location.href = "#AuthenticationIdentityCard"
                         }
                     } else if(everydata.information_step == 1) {
                         window.location.href = "#AuthenticationInformation"

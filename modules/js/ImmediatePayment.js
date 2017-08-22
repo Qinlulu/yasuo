@@ -37,7 +37,7 @@ define ( [ "jquery" ,"pageUrl", "PublicHead" , "public" , "text!modules/str/Imme
                     <ul class="ulss">
                         <li><span>到期还款时间</span><span></span><span>${data.plan_repay_time}</span></li>
                         <li><span>借款编号</span> <span></span><span>${data.order_id}</span></li>
-                        <li onclick="window.location.href='#yinhangkashezhi'">
+                        <li onclick="window.location.href='#BankCardSettings'">
                             <span>还款账号</span>
                             <span></span>
                             <span>
@@ -63,7 +63,7 @@ define ( [ "jquery" ,"pageUrl", "PublicHead" , "public" , "text!modules/str/Imme
                         <li class="liss"><span>逾期费用</span><span></span><span>${data.late_fee}</span></li>
                         <li><span>到期还款时间</span><span></span><span>${data.plan_repay_time}</span></li>
                         <li><span>借款编号</span> <span></span><span>${data.order_id}</span></li>
-                        <li onclick="window.location.href='#yinhangkashezhi'" >
+                        <li onclick="window.location.href='#BankCardSettings'" >
                             <span>还款账号</span>
                             <span></span>
                             <span>
@@ -104,7 +104,7 @@ define ( [ "jquery" ,"pageUrl", "PublicHead" , "public" , "text!modules/str/Imme
                                     //$ ( ".tiaoba" ).html ( rs.result.data[ 0 ].phone )
 
                                     $ ( ".tiaoba" ).parent ().parent ().on ( "click" , function () {
-                                        window.location.href = "#yinhangkashezhi"
+                                        window.location.href = "#BankCardSettings"
                                     } )
 
                                     $ ( ".lijihuan" ).on ( "click" , function () {
@@ -239,7 +239,7 @@ define ( [ "jquery" ,"pageUrl", "PublicHead" , "public" , "text!modules/str/Imme
                                                                 } else {
                                                                     $ ( ".tankuang" ).css ( "display" , "none" )
                                                                     $ ( ".donghua" ).hide ()
-                                                                    window.location.href = "#huankuanzhong"
+                                                                    window.location.href = "#paymenting"
                                                                 }
                                                             } )
                                                         }

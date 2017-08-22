@@ -27,6 +27,9 @@ require.config({
         "RepaymentPage":"modules/js/RepaymentPage",
         "UnPayment":"modules/js/UnPayment",
         "ImmediatePayment":"modules/js/ImmediatePayment",
+        "BankCardSettings":"modules/js/BankCardSettings",
+        "AuthenticationIdentityCard":"modules/js/AuthenticationIdentityCard",
+        "paymenting":"modules/js/paymenting",
 
     }
 })

@@ -14,6 +14,9 @@ define(["backbone","require"],function(){
             "RepaymentPage":"RepaymentPage",
             "UnPayment":"UnPayment",
             "ImmediatePayment":"ImmediatePayment",
+            "BankCardSettings":"BankCardSettings",
+            "AuthenticationIdentityCard":"AuthenticationIdentityCard",
+            "paymenting":"paymenting",
 
         },
         guidance:function () {
@@ -81,6 +84,21 @@ define(["backbone","require"],function(){
                 ImmediatePayment.render();
             })
         },
+        BankCardSettings:function () {
+            require(["BankCardSettings"], function (BankCardSettings) {
+                BankCardSettings.render();
+            })
+        },
+        AuthenticationIdentityCard:function () {
+            require(["AuthenticationIdentityCard"], function (AuthenticationIdentityCard) {
+                AuthenticationIdentityCard.render();
+            })
+        },
+        paymenting:function () {
+            require(["paymenting"], function (paymenting) {
+                paymenting.render();
+            })
+        }
 
     });
     return new Router();

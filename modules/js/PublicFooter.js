@@ -76,7 +76,7 @@ define ( [ "jquery" ,"pageUrl", "public" , "text!modules/str/PublicFooter.html"]
                                             var everydata = rs.result.data
                                             if ( everydata.credit_status == 0 ) {
                                                 if ( everydata.information_step == 0 ) {
-                                                    window.location.href = "#CertifiedIdentityCard" //renzhengshiming
+                                                    window.location.href = "#AuthenticationIdentityCard" //renzhengshiming
                                                 } else if ( everydata.information_step == 1 ) {
                                                     window.location.href = "#AuthenticationInformation"  //renzhenggeren
                                                 } else if ( everydata.information_step == 2 ) {
