@@ -8,7 +8,9 @@ define(["backbone","require"],function(){
             "ModifyPassword":"ModifyPassword",
             "HomePage":"HomePage",
             "PublicFooter":"PublicFooter",
-            "PublicAdvertis":"PublicAdvertis"
+            "PublicAdvertis":"PublicAdvertis",
+            "CoffersPage":"CoffersPage",
+            "MinePage":"MinePage",
 
         },
         guidance:function () {
@@ -50,7 +52,17 @@ define(["backbone","require"],function(){
             require(["PublicAdvertis"], function (PublicAdvertis) {
                 PublicAdvertis.render();
             })
-        }
+        },
+        CoffersPage:function () {
+            require(["CoffersPage"], function (CoffersPage) {
+                CoffersPage.render();
+            })
+        },
+        MinePage:function () {
+            require(["MinePage"], function (MinePage) {
+                MinePage.render();
+            })
+        },
 
     });
     return new Router();

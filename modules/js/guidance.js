@@ -18,7 +18,7 @@ define(["jquery","pageUrl","public","text!modules/str/guidance.html"],
                     }else {
                         $(".donghau").hide()
                         if(rs.result.status == 0){
-                            window.location.href = "#RegistrationPage" //zhucezhang
+                            window.location.href = "#LoginPhone"
                         }else {
                             window.location.href = "#HomePage"  //jiekuanzhu
                         }

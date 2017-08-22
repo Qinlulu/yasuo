@@ -1,19 +1,24 @@
-.Loan{
+.Loan {
   width: 100%;
   height: auto;
   background: #fff;
-  padding-bottom:4rem;
-  .head{
+  padding-bottom: 4rem;
+  .head {
     position: relative;
     padding-top: 0.0625rem;
     width: 100%;
     height: 14.625rem;
-    background-image: linear-gradient( #6A737C 0, #43494F 100%);
+    background-image: linear-gradient(#6A737C 0, #43494F 100%);
     .header {
       height: 3.5rem;
-      line-height:3.5rem;
+      line-height: 3.5rem;
+      span:nth-child(3) img{
+        width: 1.7rem;
+        height: 1.2rem;
+        margin: -4px auto;
+      }
     }
-    .ka{
+    .ka {
       position: relative;
       padding-top: 0.0625rem;
       width: 95%;
@@ -37,7 +42,7 @@
         border: 2px solid #FFF;
         background: rgba(255, 255, 255, .02);
         color: #FFF;
-        i{
+        i {
           img {
             margin-bottom: 0.0625rem;
             color: #D8D8D8;
@@ -48,7 +53,7 @@
           }
         }
       }
-      .ulsw{
+      .ulsw {
         color: #FFF;
         text-shadow: 0 0.0625rem 0.0625rem rgba(0, 0, 0, .27);
         width: 93%;
@@ -57,18 +62,18 @@
         margin: 6.875rem auto 0;
         font-size: 0.875rem;
         text-align: left;
-        li{
+        li {
           flex: 1;
           justify-content: space-between;
-          p{
+          p {
             margin-bottom: 0.5625rem;
           }
-          .t{
+          .t {
             color: #FFF;
             text-shadow: 0 0.0625rem 0.0625rem rgba(0, 0, 0, .27);
             font-size: 1.75rem;
             line-height: 1.75rem;
-            i{
+            i {
               font-size: 1.125rem;
               line-height: 1.125rem;
             }
@@ -76,7 +81,13 @@
         }
       }
       ol{
-        .jie{
+        display: flex;
+        width: 93%;
+        height: 2.9375rem;
+        line-height: 2.9375rem;
+        margin: 6px auto;
+        font-size: 0.75rem;
+        .jie {
           color: #FFF;
           text-shadow: 0 0.0625rem 0.0625rem rgba(0, 0, 0, .27);
           display: flex;
@@ -87,18 +98,18 @@
           font-size: 0.75rem;
           opacity: .5
         }
-        li{
+        li {
           justify-content: space-between;
           text-align: left;
           flex: 1;
-          &:nth-child(1){
+          &:nth-child(1) {
             flex: 2
           }
         }
       }
     }
   }
-  .kong{
+  .kong {
     width: 100%;
     height: 4.375rem;
   }
@@ -108,7 +119,7 @@
     .conts {
       width: 100%;
       height: auto;
-      margin-top:3rem;
+      margin-top: 3rem;
       .change {
         width: 100%;
         height: 1.25rem;
@@ -120,7 +131,7 @@
           box-shadow: inset 0 0.0625rem 0.0625rem 0 rgba(0, 0, 0, .1);
           border-radius: 0.625rem;
           margin-top: 1.5rem;
-          .jindutiaos{
+          .jindutiaos {
             position: absolute;
             width: 100%;
             height: 0.375rem;
@@ -128,7 +139,7 @@
             box-shadow: inset 0 0.0625rem 0.0625rem 0 rgba(0, 0, 0, .1);
             border-radius: 0.625rem
           }
-          .jindutiaoss{
+          .jindutiaoss {
             position: absolute;
             width: 100%;
             height: 0.375rem;
@@ -136,7 +147,7 @@
             box-shadow: inset 0 0.0625rem 0.0625rem 0 rgba(0, 0, 0, .1);
             border-radius: 0.625rem
           }
-          .huakuai{
+          .huakuai {
             background: url(https://imagecdn.xinyongjinku.com/wechat/modules/images/slide.png) center no-repeat;
             background-size: cover;
             width: 1.75rem;
@@ -146,7 +157,7 @@
             top: -0.6875rem;
             cursor: pointer
           }
-          .huakuais{
+          .huakuais {
             background: url(https://imagecdn.xinyongjinku.com/wechat/modules/images/slide.png) center no-repeat;
             background-size: cover;
             width: 1.75rem;
@@ -156,7 +167,7 @@
             top: -0.6875rem;
             cursor: pointer
           }
-          .xian{
+          .xian {
             background: 0 0;
             background-size: cover;
             width: 3.5rem;
@@ -168,7 +179,7 @@
             font-size: 0.75rem;
             text-align: center
           }
-          .xians{
+          .xians {
             background: 0 0;
             background-size: cover;
             width: 3.5rem;
@@ -187,7 +198,7 @@
       .ds {
         width: 103%;
         height: 0.9375rem;
-        line-height:0.9375rem;
+        line-height: 0.9375rem;
         display: flex;
         font-size: 0.875rem;
         color: #B3B3B3;
@@ -203,8 +214,8 @@
       .dss {
         display: flex;
         width: 100%;
-        span{
-          &:nth-child(2){
+        span {
+          &:nth-child(2) {
             flex: 29
           }
         }
@@ -217,7 +228,7 @@
         color: #FFF
       }
     }
-    .div{
+    .div {
       display: none;
       .uls {
         width: 100%;
@@ -237,16 +248,56 @@
             &:nth-child(1) {
               color: #B3B3B3;
             }
-            &:nth-child(3) img{
+            &:nth-child(3) img {
               width: 1.7rem;
               height: 1.2rem;
               margin: -4px auto;
             }
-
 
           }
         }
       }
     }
   }
+  .renzhengs {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 99;
+    display: none;
+    .renzhengsCon {
+      width: 60%;
+      height: auto;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate3d(-50%, -50%, 0);
+      background: #fff;
+      padding: 0.75rem;
+      border-radius: 16px;
+      .tittles {
+        height: 3rem;
+        line-height: 3rem;
+        text-align: center;
+        font-size: 0.75rem;
+      }
+      .lists {
+        width: 90%;
+        height: 2rem;
+        line-height: 2.3rem;
+        margin: 0 auto;
+        border-top: 1px solid #e0e0e0;
+        text-align: center;
+        display: flex;
+        font-size: 0.75rem;
+        span {
+          flex: 1;
+        }
+      }
+    }
+  }
+
 }

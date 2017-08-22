@@ -9,11 +9,12 @@ require.config({
         "public": "https://imagecdn.xinyongjinku.com/wechat/lib/public",
         "ajaxsub":"https://imagecdn.xinyongjinku.com/wechat/lib/ajaxsub",
         'megapix':'https://imagecdn.xinyongjinku.com/wechat/lib/megapiximage',
-        "check":"modules/js/check",
+        "check":"modules/js/PublicCheck",
         "PublicHead":"modules/js/PublicHead",
         "PublicPassWord":"modules/js/PublicPassWord",
         "PublicFooter":"modules/js/PublicFooter",
         "PublicAdvertis":"modules/js/PublicAdvertis",
+        "JudgeLimit":"modules/js/JudgeLimit",
         "guidance":"modules/js/guidance",
         "loginphone":"modules/js/LoginPhone",
         "pageUrl":"modules/js/pageUrl",
@@ -21,7 +22,8 @@ require.config({
         "RegistrationPage":"modules/js/RegistrationPage",
         "ModifyPassword":"modules/js/ModifyPassword",
         "HomePage":"modules/js/HomePage",
-        "JudgeLimit":"JudgeLimit"
+        "CoffersPage":"modules/js/HomePage",
+        "MinePage":"modules/js/MinePage",
 
     }
 })

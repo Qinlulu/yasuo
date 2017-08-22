@@ -8,7 +8,7 @@ define(["jquery","pageUrl","PublicHead","PublicPassWord","public", "text!modules
             $(".tit").html(sessionStorage.getItem("cunchuzhang"));
             //忘记密码
             $(".wangji").on("click",function(){
-                window.location.href="#xiugaimi?name="+$(".tit").html()
+                window.location.href="#ModifyPassword?name="+$(".tit").html()
             })
             $(".btjsd").on("click",function(){
                 var api_url = pageUrl.render()+".xinyongjinku.com/passport/user.php?c=account";
