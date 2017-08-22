@@ -22,13 +22,13 @@ define ( [ "jquery" ,"pageUrl", "public" , "text!modules/str/PublicFooter.html"]
 
             //设置背景图片
             function fnBackground () {
-                for ( var i = 0 ; i < $ ( ".footers a" ).length ; i++ ) {
-                    $ ( ".footers p" ).eq ( i ).css ( {
+                for ( var i = 0 ; i < $ ( ".PublicFooter a" ).length ; i++ ) {
+                    $ ( ".PublicFooter p" ).eq ( i ).css ( {
                         "background" : "url('" + aImagesSrc[i][0] + "')" ,
                         "background-size" : "cover"
                     } )
-                    var INDEX = $ ( ".footers a.clicked" ).index ()
-                    $ ( ".footers p" ).eq ( INDEX ).css ( {
+                    var INDEX = $ ( ".PublicFooter a.clicked" ).index ()
+                    $ ( ".PublicFooter p" ).eq ( INDEX ).css ( {
                         "background" : "url('" + aImagesSrc[ INDEX ][ 1 ] + "')" ,
                         "background-size" : "cover"
                     } )
@@ -37,7 +37,7 @@ define ( [ "jquery" ,"pageUrl", "public" , "text!modules/str/PublicFooter.html"]
             }
             fnBackground ()
 
-            $ ( ".footers a" ).on ( "click" , function () {
+            $ ( ".PublicFooter a" ).on ( "click" , function () {
                 $(".main").css("height","100%")
                 $ ( this ).addClass ( "clicked" ).siblings().removeClass ( "clicked" )
                 fnBackground ()
