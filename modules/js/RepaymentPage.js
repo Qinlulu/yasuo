@@ -1,4 +1,4 @@
-define(["jquery", "pageUrl","PublicHead","public", "text!../str/RepaymentPage.html"],
+define(["jquery", "pageUrl","PublicHead","public", "text!modules/str/RepaymentPage.html"],
     function ($,pageUrl, header,mc, cc, html) {
         function render() {
             $(".main").html(html);

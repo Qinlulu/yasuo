@@ -1,0 +1,58 @@
+.AddBankCard {
+  width: 100%;
+}
+.AddBankCard .tittle {
+  width: 100%;
+  height: 2rem;
+  line-height: 2rem;
+  font-size: 0.75rem;
+  color: #5C5C5C;
+  text-align: center;
+}
+.AddBankCard .conts {
+  width: 100%;
+  height: auto;
+  margin-top: 0;
+}
+.AddBankCard .conts ul {
+  width: 100%;
+}
+.AddBankCard .conts ul li {
+  background: #FFF;
+  box-shadow: 0 -0.0625rem 0 0 #EDEDED, 0 0.0625rem 0 0 #EDEDED;
+  height: 2.5625rem;
+  line-height: 2.5625rem;
+  display: flex;
+  font-size: 0.75rem;
+}
+.AddBankCard .conts ul li span {
+  width: 6.875rem;
+  height: 2.5625rem;
+  text-indent: 0.875rem;
+}
+.AddBankCard .conts ul li input {
+  width: 10.9375rem;
+  height: 100%;
+  border: none;
+  outline: 0;
+  display: inline-block;
+}
+.AddBankCard .conts ul li i {
+  color: #CC9F68;
+}
+.AddBankCard .conts ul li .huoyan {
+  width: 6.375rem;
+  color: #CC9F68;
+  display: inline-block;
+  background: 0 0;
+  border: none;
+  outline: 0;
+  text-align: center;
+  font-size: 0.75rem;
+  margin: 0;
+}
+.AddBankCard .zhichikas {
+  text-align: center;
+  line-height: 2.5rem;
+  color: rgba(0, 0, 235, 0.6);
+}

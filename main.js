@@ -30,6 +30,9 @@ require.config({
         "BankCardSettings":"modules/js/BankCardSettings",
         "AuthenticationIdentityCard":"modules/js/AuthenticationIdentityCard",
         "paymenting":"modules/js/paymenting",
+        "BorrowRecord":"modules/js/BorrowRecord",
+        "BorrowDetails":"modules/js/BorrowDetails",
+        "AddBankCard":"modules/js/AddBankCard",
 
     }
 })
@@ -38,7 +41,7 @@ require(["backbone", "route"], function () {
     Backbone.history.start();
     var rule = window.location.hash;
     if ( rule.split('?')[0] != '#zhimayin' && rule.split('?')[0] != '#yindao' && rule.split('?')[0] != '#shenhez'){
-        location.hash = "PublicFooter";
+        location.hash = "guidance";
     }
 })
 

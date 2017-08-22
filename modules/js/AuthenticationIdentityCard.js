@@ -1,4 +1,4 @@
-define(["jquery", "pageUrl", "public", "../../lib/ajaxsub", "text!modules/str/AuthenticationIdentityCard.html"],
+define(["jquery", "pageUrl", "public", "ajaxsub", "text!modules/str/AuthenticationIdentityCard.html"],
     function ($, pageUrl, mc, sub, html) {
         function render() {
             $(".main").html(html);

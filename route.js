@@ -7,7 +7,6 @@ define(["backbone","require"],function(){
             "RegistrationPage":"RegistrationPage",
             "ModifyPassword":"ModifyPassword",
             "HomePage":"HomePage",
-            "PublicFooter":"PublicFooter",
             "PublicAdvertis":"PublicAdvertis",
             "CoffersPage":"CoffersPage",
             "MinePage":"MinePage",
@@ -17,7 +16,9 @@ define(["backbone","require"],function(){
             "BankCardSettings":"BankCardSettings",
             "AuthenticationIdentityCard":"AuthenticationIdentityCard",
             "paymenting":"paymenting",
-
+            "BorrowRecord":"BorrowRecord",
+            "BorrowDetails":"BorrowDetails",
+            "AddBankCard":"AddBankCard",
         },
         guidance:function () {
             require(["guidance"], function (guidance) {
@@ -47,11 +48,6 @@ define(["backbone","require"],function(){
         HomePage:function () {
             require(["HomePage"], function (HomePage) {
                 HomePage.render();
-            })
-        },
-        PublicFooter:function () {
-            require(["PublicFooter"], function (PublicFooter) {
-                PublicFooter.render();
             })
         },
         PublicAdvertis:function () {
@@ -98,7 +94,22 @@ define(["backbone","require"],function(){
             require(["paymenting"], function (paymenting) {
                 paymenting.render();
             })
-        }
+        },
+        BorrowRecord:function () {
+            require(["BorrowRecord"], function (BorrowRecord) {
+                BorrowRecord.render();
+            })
+        },
+        BorrowDetails:function () {
+            require(["BorrowDetails"], function (BorrowDetails) {
+                BorrowDetails.render();
+            })
+        },
+        AddBankCard:function () {
+            require(["AddBankCard"], function (AddBankCard) {
+                AddBankCard.render();
+            })
+        },
 
     });
     return new Router();
