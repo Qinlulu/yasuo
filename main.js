@@ -24,6 +24,9 @@ require.config({
         "HomePage":"modules/js/HomePage",
         "CoffersPage":"modules/js/HomePage",
         "MinePage":"modules/js/MinePage",
+        "RepaymentPage":"modules/js/RepaymentPage",
+        "UnPayment":"modules/js/UnPayment",
+        "ImmediatePayment":"modules/js/ImmediatePayment",
 
     }
 })

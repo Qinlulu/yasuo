@@ -11,6 +11,9 @@ define(["backbone","require"],function(){
             "PublicAdvertis":"PublicAdvertis",
             "CoffersPage":"CoffersPage",
             "MinePage":"MinePage",
+            "RepaymentPage":"RepaymentPage",
+            "UnPayment":"UnPayment",
+            "ImmediatePayment":"ImmediatePayment",
 
         },
         guidance:function () {
@@ -61,6 +64,21 @@ define(["backbone","require"],function(){
         MinePage:function () {
             require(["MinePage"], function (MinePage) {
                 MinePage.render();
+            })
+        },
+        RepaymentPage:function () {
+            require(["RepaymentPage"], function (RepaymentPage) {
+                RepaymentPage.render();
+            })
+        },
+        UnPayment:function () {
+            require(["UnPayment"], function (UnPayment) {
+                UnPayment.render();
+            })
+        },
+        ImmediatePayment:function () {
+            require(["ImmediatePayment"], function (ImmediatePayment) {
+                ImmediatePayment.render();
             })
         },
 
