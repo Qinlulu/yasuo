@@ -1,1 +1,0 @@
-define(["jquery","text!modules/str/Loginphone.html"],function(e,t){function n(){e(".main").html(t)}return{render:n}});

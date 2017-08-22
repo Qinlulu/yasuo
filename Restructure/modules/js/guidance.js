@@ -1,1 +1,0 @@
-define(["jquery","text!modules/str/guidance.html"],function(e,t){function n(){e(".main").html(t),console.log(e),e(".main").on("click",function(){window.location.href="#Loginphone"})}return{render:n}});

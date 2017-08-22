@@ -9,10 +9,20 @@ require.config({
         "public": "https://imagecdn.xinyongjinku.com/wechat/lib/public",
         "ajaxsub":"https://imagecdn.xinyongjinku.com/wechat/lib/ajaxsub",
         'megapix':'https://imagecdn.xinyongjinku.com/wechat/lib/megapiximage',
+        "check":"modules/js/check",
+        "PublicHead":"modules/js/PublicHead",
+        "PublicPassWord":"modules/js/PublicPassWord",
+        "PublicFooter":"modules/js/PublicFooter",
+        "PublicAdvertis":"modules/js/PublicAdvertis",
         "guidance":"modules/js/guidance",
-        "Loginphone":"modules/js/Loginphone",
+        "loginphone":"modules/js/LoginPhone",
         "pageUrl":"modules/js/pageUrl",
-        "Loginpassword":"modules/js/Loginpassword",
+        "LoginPassword":"modules/js/LoginPassword",
+        "RegistrationPage":"modules/js/RegistrationPage",
+        "ModifyPassword":"modules/js/ModifyPassword",
+        "HomePage":"modules/js/HomePage",
+        "JudgeLimit":"JudgeLimit"
+
     }
 })
 
@@ -20,7 +30,7 @@ require(["backbone", "route"], function () {
     Backbone.history.start();
     var rule = window.location.hash;
     if ( rule.split('?')[0] != '#zhimayin' && rule.split('?')[0] != '#yindao' && rule.split('?')[0] != '#shenhez'){
-        location.hash = "guidance";
+        location.hash = "PublicFooter";
     }
 })
 

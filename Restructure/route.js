@@ -1,1 +1,0 @@
-define(["backbone","require"],function(){var e=Backbone.Router.extend({routes:{guidance:"guidance",Loginphone:"Loginphone"},guidance:function(){require(["guidance"],function(e){e.render()})},Loginphone:function(){require(["Loginphone"],function(e){e.render()})}});return new e});

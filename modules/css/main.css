@@ -1,1 +1,11 @@
-@import "guidance.css";@import "Loginphone.css";
+@import "reset.css";
+@import "common.css";
+@import "home.css";
+@import "guidance.css";
+@import "LoginPhone.css";
+@import "LoginPassword.css";
+@import "RegistrationPage.css";
+@import "ModifyPassword.css";
+@import "HomePage.css";
+@import "PublicFooter.css";
+@import "PublicAdvertis.css";
