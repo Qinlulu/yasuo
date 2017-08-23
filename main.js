@@ -9,15 +9,18 @@ require.config({
         "public": "https://imagecdn.xinyongjinku.com/wechat/lib/public",
         "ajaxsub":"https://imagecdn.xinyongjinku.com/wechat/lib/ajaxsub",
         'megapix':'https://imagecdn.xinyongjinku.com/wechat/lib/megapiximage',
+        /*公用的部分*/
+        "pageUrl":"modules/js/pageUrl",
         "check":"modules/js/PublicCheck",
         "PublicHead":"modules/js/PublicHead",
-        "PublicPassWord":"modules/js/PublicPassWord",
         "PublicFooter":"modules/js/PublicFooter",
+        "PublicPassWord":"modules/js/PublicPassWord",
         "PublicAdvertis":"modules/js/PublicAdvertis",
+        /*判断额度*/
         "JudgeLimit":"modules/js/JudgeLimit",
+
         "guidance":"modules/js/guidance",
         "Loginphone":"modules/js/Loginphone",
-        "pageUrl":"modules/js/pageUrl",
         "LoginPassword":"modules/js/LoginPassword",
         "RegistrationPage":"modules/js/RegistrationPage",
         "ModifyPassword":"modules/js/ModifyPassword",
