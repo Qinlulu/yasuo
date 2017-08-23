@@ -46,6 +46,7 @@ require.config({
         "InAudit":"modules/js/InAudit",
         "FailAudit":"modules/js/FailAudit",
         "SuccessAudit":"modules/js/SuccessAudit",
+        "InformDetails":"modules/js/InformDetails"
 
     }
 })
