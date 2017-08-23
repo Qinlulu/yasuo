@@ -41,6 +41,7 @@ require.config({
         "share":"modules/js/share",
         "CreditCoffers":"modules/js/CreditCoffers",
         "HelpCenter":"modules/js/HelpCenter",
+        "configuration":"modules/js/configuration",
 
     }
 })

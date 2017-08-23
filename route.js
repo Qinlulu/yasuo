@@ -22,6 +22,7 @@ define(["backbone","require"],function(){
             "share":"share",
             "CreditCoffers":"CreditCoffers",
             "HelpCenter":"HelpCenter",
+            "configuration":"configuration",
         },
         guidance:function () {
             require(["guidance"], function (guidance) {
@@ -127,7 +128,13 @@ define(["backbone","require"],function(){
             require(["HelpCenter"], function (HelpCenter) {
                 HelpCenter.render();
             })
+        },
+        configuration:function () {
+            require(["configuration"], function (configuration) {
+                configuration.render();
+            })
         }
+
 
     });
     return new Router();
