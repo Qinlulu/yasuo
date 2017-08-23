@@ -1,5 +1,5 @@
-define(["jquery","pageUrl", "PublicHead","public", "text!modules/str/AddBankCard.html"],
-    function ($,pageUrl, header,mc, html) {
+define(["jquery","pageUrl", "PublicHead","public","layer", "text!modules/str/AddBankCard.html"],
+    function ($,pageUrl, header,mc,layer, html) {
         function render() {
             $(".main").html(html);
             header.render("添加银行卡")
@@ -10,7 +10,7 @@ define(["jquery","pageUrl", "PublicHead","public", "text!modules/str/AddBankCard
                 if(A ==""){
 
                 }else if (!reg.test(A)) {
-                    alert("请输入正确手机号码")
+                    layer.msg('请输入正确手机号码', {time:1000});
                     return
                 }
 
@@ -23,7 +23,8 @@ define(["jquery","pageUrl", "PublicHead","public", "text!modules/str/AddBankCard
                     if(A==""){
 
                     }else if (!reg.test(A)) {
-                        alert("请输入正确银行卡")
+                        layer.msg('请输入正确银行卡', {time:1000});
+
                         return
                     } else {
                         var api_url = pageUrl.render()+".xinyongjinku.com/passport/bank.php?c=account";
@@ -37,8 +38,7 @@ define(["jquery","pageUrl", "PublicHead","public", "text!modules/str/AddBankCard
                             var json = api.JsonpArr(r);
                             api.call(json, api_url).done(function (rs) {
                                 if (rs.error) {
-
-                                    alert(rs.error.message)
+                                    layer.msg(rs.error.message, {time:1000});
 
                                 } else {
                                     var yinhangka = {
@@ -83,14 +83,14 @@ define(["jquery","pageUrl", "PublicHead","public", "text!modules/str/AddBankCard
                 getSwiperData()
                 function getSwiperData() {
                     if ($("#yph").val() == "") {
-                        alert("请输入预留手机号码")
+                        layer.msg('请输入预留手机号码', {time:1000});
                         $(".donghua").hide()
                         return
                     }
                     var yonghu = JSON.parse(sessionStorage.getItem("yonghus"))
                     var yinhangkass = JSON.parse(sessionStorage.getItem("yinhangkas"))
                     if (!yinhangkass) {
-                        alert("确认银行卡信息")
+                        layer.msg('确认银行卡信息', {time:1000});
                         $(".donghua").hide()
                         return
                     }
@@ -107,7 +107,7 @@ define(["jquery","pageUrl", "PublicHead","public", "text!modules/str/AddBankCard
 
                     api.call(json, api_url).done(function (rs) {
                         if (rs.error) {
-                            alert(rs.error.message)
+                            layer.msg(rs.error.message, {time:1000});
                             console.log(rs)
                             $(".donghua").hide()
                         } else {
@@ -136,15 +136,15 @@ define(["jquery","pageUrl", "PublicHead","public", "text!modules/str/AddBankCard
             $(".jiaka").on("click", function () {
 
                 if (!$(".aaaaa")) {
-                    alert("请获取验证码")
+                    layer.msg('请获取验证码', {time:1000});
                     return
                 }
                 if ($("#kahao").val() == "") {
-                    alert("请输入银行卡号码")
+                    layer.msg('请输入银行卡号码', {time:1000});
                     return
                 }
                 if ($(".yanzhengs").val() == "") {
-                    alert("请输入预留手机号码验证码")
+                    layer.msg('请输入预留手机号码验证码', {time:1000});
                     return
                 }
                 var api_url = pageUrl.render()+".xinyongjinku.com/passport/bank.php?c=account";
@@ -161,7 +161,7 @@ define(["jquery","pageUrl", "PublicHead","public", "text!modules/str/AddBankCard
 
                     api.call(json, api_url).done(function (rs) {
                         if (rs.error) {
-                            alert(rs.error.message)
+                            layer.msg(rs.error.message, {time:1000});
                         } else {
                             window.location.href="#HomePage"
                         }

@@ -1,5 +1,5 @@
-define(["jquery", "pageUrl", "public", "ajaxsub", "text!modules/str/AuthenticationIdentityCard.html"],
-    function ($, pageUrl, mc, sub, html) {
+define(["jquery", "pageUrl", "public", "ajaxsub", "layer","text!modules/str/AuthenticationIdentityCard.html"],
+    function ($, pageUrl, mc, sub,layer, html) {
         function render() {
             $(".main").html(html);
             $(".back").on("click", function () {
@@ -21,19 +21,20 @@ define(["jquery", "pageUrl", "public", "ajaxsub", "text!modules/str/Authenticati
                         if (rs.error.message == "用户未登录") {
                             window.location.href = "#RegistrationPage"
                         } else {
-                            alert(rs.error.message)
+                            layer.msg(rs.error.message, {time:1000});
                         }
                     } else {
                         var cunchuAjax = {}
                         cunchuAjax.url = rs.result.data.msg
                         if (!window.FileReader) {
-                            alert("浏览器不支持文件获取");
+                            layer.msg('浏览器不支持文件获取', {time:1000});
                         } else {
                             $(".file1").on("change", function () {
                                 $(".donghua").show()
                                 var file = document.querySelector(".file1").files[0];
                                 if (!/image\/\w+/.test(file.type)) {
-                                    alert("需要的是图片");
+                                    layer.msg('需要的是图片', {time:1000});
+
                                     return false;
                                 }
                                 var canvas = document.createElement("canvas");
@@ -81,7 +82,7 @@ define(["jquery", "pageUrl", "public", "ajaxsub", "text!modules/str/Authenticati
                                                 cunchuAjax.renzheng = data.err_msg
                                                 $(".donghua").hide()
                                             } else {
-                                                alert("失败了")
+                                               layer.msg('失败了', {time:1000})
                                                 $(".donghua").hide()
                                             }
                                         }
@@ -92,7 +93,7 @@ define(["jquery", "pageUrl", "public", "ajaxsub", "text!modules/str/Authenticati
                                 $(".donghua").show()
                                 var file = document.querySelector(".file2").files[0];
                                 if (!/image\/\w+/.test(file.type)) {
-                                    alert("需要的是图片");
+                                    layer.msg('需要的是图片', {time:1000});
                                     return false;
                                 }
                                 var canvas = document.createElement("canvas");
@@ -140,7 +141,7 @@ define(["jquery", "pageUrl", "public", "ajaxsub", "text!modules/str/Authenticati
                                                 cunchuAjax.renfan = data.err_msg
                                                 $(".donghua").hide()
                                             } else {
-                                                alert("失败了")
+                                               layer.msg('失败了', {time:1000});
                                                 $(".donghua").hide()
                                             }
                                         }
@@ -150,7 +151,8 @@ define(["jquery", "pageUrl", "public", "ajaxsub", "text!modules/str/Authenticati
                             $(".file3").on("change", function () {
                                 var file = document.querySelector(".file3").files[0];
                                 if (!/image\/\w+/.test(file.type)) {
-                                    alert("需要的是图片");
+                                    layer.msg('需要的是图片', {time:1000});
+
                                     return false;
                                 }
                                 $(".donghua").show()
@@ -174,7 +176,7 @@ define(["jquery", "pageUrl", "public", "ajaxsub", "text!modules/str/Authenticati
                             var reg = /^[\u4e00-\u9fa5]{2,4}$/
                             if (A == "") {
                             } else if (!reg.test(A)) {
-                                alert('ֻ姓名格式不正确')
+                                layer.msg('ֻ姓名格式不正确', {time:1000});
                                 $(this).val("");
                                 return;
                             }
@@ -184,18 +186,18 @@ define(["jquery", "pageUrl", "public", "ajaxsub", "text!modules/str/Authenticati
                             var reg1 = /^(^[1-9]\d{7}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{3}$)|(^[1-9]\d{5}[1-9]\d{3}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])((\d{4})|\d{3}[Xx])$)$/
                             if (A == "") {
                             } else if (!reg1.test(A)) {
-                                alert('ֻ身份证号码格式不正确')
+                                layer.msg('ֻ身份证号码格式不正确', {time:1000});
                                 $(this).val("");
                                 return;
                             }
                         });
                         $(".gogeren").on("click", function () {
                             if ($(".xingming").val() == "" || $(".shenfens").val() == "") {
-                                alert("完善数据")
+                                layer.msg('完善数据', {time:1000});
                                 return
                             }
                             if (!cunchuAjax.renzheng || !cunchuAjax.renfan || !cunchuAjax.renlian) {
-                                alert("完善数据")
+                                layer.msg('完善数据', {time:1000});
                                 return
                             }
                             $(".donghua").show()
@@ -221,7 +223,7 @@ define(["jquery", "pageUrl", "public", "ajaxsub", "text!modules/str/Authenticati
                                 console.log(json)
                                 api.call(json, api_url).done(function (rs) {
                                     if (rs.error) {
-                                        alert(rs.error.message)
+                                        layer.msg(rs.error.message, {time:1000});
                                         $(".donghua").hide()
                                     } else {
                                         $(".donghua").hide()

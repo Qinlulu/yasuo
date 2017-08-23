@@ -1,4 +1,4 @@
-define(["jquery"],function($){
+define(["jquery","layer"],function($,layer){
     function render(even,eve){
         //点击键回车时 触发事件
         $(document).keydown(function (event) {
@@ -70,7 +70,7 @@ define(["jquery"],function($){
             var A = $(this).val()
             var reg = /^(0|86|17951)?(13[0-9]|15[012356789]|17[678]|18[0-9]|14[57])[0-9]{8}$/
             if (!reg.test(A)) {
-                alert("请输入正确手机号码");
+                layer.msg('请输入正确手机号码', {time:1000});
                 return
             }
         })

@@ -1,5 +1,5 @@
-define(["jquery","pageUrl", "public","text!modules/str/MinePage.html"],
-    function($,pageUrl, mc,html){
+define(["jquery","pageUrl", "public","layer","text!modules/str/MinePage.html"],
+    function($,pageUrl, mc,layer,html){
         function render(){
             $(".main").html(html);
             $(".donghua").show()
@@ -25,7 +25,7 @@ define(["jquery","pageUrl", "public","text!modules/str/MinePage.html"],
             }
 
             $(".wechats").on("click",function(){
-                alert("公众号已复制，去微信搜索添加")
+                layer.msg('公众号已复制，去微信搜索添加', {time:1000});
 
             })
             $(".wechats").find("span").eq(2).css("color","#CC9F68")

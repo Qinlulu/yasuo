@@ -1,5 +1,5 @@
-define ( [ "jquery" ,"pageUrl", "PublicHead" , "public" , "text!modules/str/ImmediatePayment.html"] ,
-    function ( $ ,pageUrl, header , mc , html ) {
+define ( [ "jquery" ,"pageUrl", "PublicHead" , "public" ,"layer", "text!modules/str/ImmediatePayment.html"] ,
+    function ( $ ,pageUrl, header , mc ,layer, html ) {
         function render () {
             $ ( ".main" ).html ( html );
             $ ( ".donghua" ).show ()
@@ -18,7 +18,7 @@ define ( [ "jquery" ,"pageUrl", "PublicHead" , "public" , "text!modules/str/Imme
                 var json = api.JsonpArr ( r );
                 api.call ( json , api_url ).done ( function ( rs ) {
                     if ( rs.error ) {
-                        alert ( rs.error.message )
+                        layer.msg(rs.error.message, {time:1000});
                         $ ( ".donghua" ).hide ()
                     } else {
                         var data = rs.result.data
@@ -93,7 +93,7 @@ define ( [ "jquery" ,"pageUrl", "PublicHead" , "public" , "text!modules/str/Imme
                             var json = api.JsonpArr ( r );
                             api.call ( json , api_url ).done ( function ( rs ) {
                                 if ( rs.error ) {
-                                    alert ( rs.error.message )
+                                    layer.msg(rs.error.message, {time:1000});
                                     $ ( ".donghua" ).hide ()
                                 } else {
                                     $ ( ".donghua" ).hide ()
@@ -129,7 +129,7 @@ define ( [ "jquery" ,"pageUrl", "PublicHead" , "public" , "text!modules/str/Imme
                                             console.log(json)
                                             api.call ( json , api_url ).done ( function ( rs ) {
                                                 if ( rs.error ) {
-                                                    alert ( rs.error.message )
+                                                    layer.msg(rs.error.message, {time:1000});
                                                     $ ( ".donghua" ).hide ()
                                                 } else {
                                                     $ ( ".donghua" ).hide ()
@@ -181,7 +181,7 @@ define ( [ "jquery" ,"pageUrl", "PublicHead" , "public" , "text!modules/str/Imme
                                                                 console.log(json)
                                                                 api.call(json, api_url).done(function (rs) {
                                                                     if (rs.error) {
-                                                                        alert(rs.error.message)
+                                                                        layer.msg(rs.error.message, {time:1000});
                                                                         clearInterval(time);
                                                                         $(".daoji").html("重新发送")
                                                                         $(".daoji").css("color", "#666")
@@ -217,7 +217,8 @@ define ( [ "jquery" ,"pageUrl", "PublicHead" , "public" , "text!modules/str/Imme
                                                             var json = api.JsonpArr ( r );
                                                             api.call ( json , api_url ).done ( function ( rs ) {
                                                                 if ( rs.error ) {
-                                                                    alert ( rs.error.message )
+                                                                    layer.msg(rs.error.message, {time:1000});
+
                                                                     //如果银行卡余额不足强返回
                                                                     /*if(rs.){
 

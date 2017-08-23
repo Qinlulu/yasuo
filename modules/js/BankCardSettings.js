@@ -1,5 +1,5 @@
-define(["jquery","pageUrl", "PublicHead","public","text!modules/str/BankCardSettings.html"],
-    function ($,pageUrl,header, mc,html) {
+define(["jquery", "pageUrl", "PublicHead", "public", "layer", "text!modules/str/BankCardSettings.html"],
+    function ($, pageUrl, header, mc, layer, html) {
         function render() {
             $(".main").html(html);
             header.render("银行卡设置")
@@ -16,14 +16,15 @@ define(["jquery","pageUrl", "PublicHead","public","text!modules/str/BankCardSett
                      $(".cont1").hide()
                  })*/
 
-            var api_url = pageUrl.render()+".xinyongjinku.com/passport/index.php?c=first";
+            var api_url = pageUrl.render() + ".xinyongjinku.com/passport/index.php?c=first";
             getSwiperDatast()
+
             function getSwiperDatast() {
                 var r = ["index", {}];
                 var json = api.JsonpArr(r);
                 api.call(json, api_url).done(function (rs) {
                     if (rs.error) {
-                        alert(rs.error.message)
+                        layer.msg(rs.error.message, {time:1000});
                         $(".donghua").hide()
                     } else {
                         $(".donghua").hide()
@@ -45,8 +46,9 @@ define(["jquery","pageUrl", "PublicHead","public","text!modules/str/BankCardSett
                         } else if (everydata.credit_status == 2) {
                             window.location.href = "#FailAudit"
                         } else {
-                            var api_url = pageUrl.render()+".xinyongjinku.com/passport/bank.php?c=account";
+                            var api_url = pageUrl.render() + ".xinyongjinku.com/passport/bank.php?c=account";
                             getSwiperDatas()
+
                             function getSwiperDatas() {
                                 var r = ["bankCradList"];
                                 var json = api.JsonpArr(r);
@@ -59,20 +61,20 @@ define(["jquery","pageUrl", "PublicHead","public","text!modules/str/BankCardSett
 
                                     } else {
                                         var str1 = rs.result.data[0].bank_card
-                                        var names=str1.substring(0, 4) + "****" + str1.substring((str1.length-4), str1.length)
+                                        var names = str1.substring(0, 4) + "****" + str1.substring((str1.length - 4), str1.length)
 
                                         var str = `
-                     <dl>
-                        <dt>
-                            <span></span>
-                        </dt>
-                        <dd>
-                            <p>${rs.result.data[0].bank_name}</p>
-                            <p>储蓄卡</p>
-                            <p>${names}</p>
-                        </dd>
-                    </dl>
-                    `
+                                             <dl>
+                                                <dt>
+                                                    <span></span>
+                                                </dt>
+                                                <dd>
+                                                    <p>${rs.result.data[0].bank_name}</p>
+                                                    <p>储蓄卡</p>
+                                                    <p>${names}</p>
+                                                </dd>
+                                            </dl>
+                                            `
                                         $(".dlst").html(str)
                                         //$(".button button a").html("+更换绑定银行卡")
                                         sessionStorage.setItem("hao", rs.result.data[0].bank_card)
@@ -82,7 +84,6 @@ define(["jquery","pageUrl", "PublicHead","public","text!modules/str/BankCardSett
 
                             }
                         }
-
 
 
                     }

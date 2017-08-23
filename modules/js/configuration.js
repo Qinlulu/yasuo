@@ -1,5 +1,5 @@
-define(["jquery","pageUrl","PublicHead","check",'public',"text!modules/str/configuration.html"],
-    function($,pageUrl,header,check, mc, html){
+define(["jquery","pageUrl","PublicHead","check",'public',"layer","text!modules/str/configuration.html"],
+    function($,pageUrl,header,check, mc,layer, html){
         function render(){
             $(".main").html(html);
             header.render("设置")
@@ -13,7 +13,7 @@ define(["jquery","pageUrl","PublicHead","check",'public',"text!modules/str/confi
 
                     api.call(json, api_url).done(function (rs) {
                         if (rs.error) {
-                            alert(rs.error.message)
+                            layer.msg(rs.error.message, {time:1000});
                         } else {
                             sessionStorage.clear();
                             localStorage.clear();

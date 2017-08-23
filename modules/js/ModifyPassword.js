@@ -1,5 +1,5 @@
-define(["jquery","pageUrl","PublicHead","check","PublicPassWord",'public',"text!modules/str/ModifyPassword.html"],
-    function($, pageUrl,header,check,password, mc, html){
+define(["jquery","pageUrl","PublicHead","check","PublicPassWord",'public',"layer","text!modules/str/ModifyPassword.html"],
+    function($, pageUrl,header,check,password, mc,layer, html){
         function render(){
             $(".main").html(html);
             header.render("修改密码")
@@ -23,7 +23,7 @@ define(["jquery","pageUrl","PublicHead","check","PublicPassWord",'public',"text!
 
                     api.call(json, api_url).done(function (rs) {
                         if(rs.error){
-                            alert(rs.error.message)
+                            layer.msg(rs.error.message, {time:1000});
                         }else{
                             $(this).addClass("aaaaa")
                             if( $(".huoyan").html()=="重新发送" ||  $(".huoyan").html()=="获取验证码") {
@@ -51,7 +51,7 @@ define(["jquery","pageUrl","PublicHead","check","PublicPassWord",'public',"text!
             $(".btjsd").on("click",function(){
 
                 if($(".pass").val()=="" || $(".yans").val()=="" ){
-                    alert("请输入信息")
+                    layer.msg("请输入信息", {time:1000});
                     return
                 }
                 var api_url = pageUrl.render()+".xinyongjinku.com/passport/user.php?c=account";
@@ -70,7 +70,7 @@ define(["jquery","pageUrl","PublicHead","check","PublicPassWord",'public',"text!
                     api.call(json, api_url).done(function (rs) {
 
                         if(rs.error){
-                            alert(rs.error.message)
+                            layer.msg(rs.error.message, {time:1000});
                             $(".yans").val("")
                             $(".pass").val("")
                         }else{

@@ -1,5 +1,5 @@
-define ( [ "jquery" ,"pageUrl", "public" , "text!modules/str/PublicFooter.html"] ,
-    function ( $ ,pageUrl, mc , html ) {
+define ( [ "jquery" ,"pageUrl", "public" ,"layer", "text!modules/str/PublicFooter.html"] ,
+    function ( $ ,pageUrl, mc ,layer, html ) {
         function render () {
             $ ( "footer" ).html ( html );
             $ ( "#YSF-BTN-HOLDER" ).hide ();
@@ -69,7 +69,7 @@ define ( [ "jquery" ,"pageUrl", "public" , "text!modules/str/PublicFooter.html"]
                                     var json = api.JsonpArr ( r );
                                     api.call ( json , api_url ).done ( function ( rs ) {
                                         if ( rs.error ) {
-                                            alert ( rs.error.message )
+                                            layer.msg(rs.error.message, {time:1000});
                                             $ ( ".donghua" ).hide ()
                                         } else {
                                             $ ( ".donghua" ).hide ()
@@ -97,7 +97,7 @@ define ( [ "jquery" ,"pageUrl", "public" , "text!modules/str/PublicFooter.html"]
                                                             api.call ( json , api_url ).done ( function ( rs ) {
                                                                 $ ( ".contss" ).html ( "" )
                                                                 if ( rs.error ) {
-                                                                    alert ( rs.error.message )
+                                                                    layer.msg(rs.error.message, {time:1000});
                                                                     $ ( ".donghua" ).hide ()
                                                                 } else {
                                                                     $ ( ".donghua" ).hide ()
@@ -123,7 +123,7 @@ define ( [ "jquery" ,"pageUrl", "public" , "text!modules/str/PublicFooter.html"]
                                                     api.call ( json , api_url ).done ( function ( rs ) {
                                                         $ ( ".contss" ).html ( "" )
                                                         if ( rs.error ) {
-                                                            alert ( rs.error.message )
+                                                            layer.msg(rs.error.message, {time:1000});
                                                             $ ( ".donghua" ).hide ()
                                                         } else {
                                                             $ ( ".donghua" ).hide ()

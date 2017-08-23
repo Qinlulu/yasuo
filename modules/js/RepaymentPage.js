@@ -1,5 +1,5 @@
-define(["jquery", "pageUrl","PublicHead","public", "text!modules/str/RepaymentPage.html"],
-    function ($,pageUrl, header,mc,html) {
+define(["jquery", "pageUrl","PublicHead","public","layer", "text!modules/str/RepaymentPage.html"],
+    function ($,pageUrl, header,mc,layer,html) {
         function render() {
             $(".main").html(html);
             header.render("我要还款")
@@ -15,7 +15,7 @@ define(["jquery", "pageUrl","PublicHead","public", "text!modules/str/RepaymentPa
                         if(rs.error.message=="用户未登录"){
                             window.location.href="#Loginphone"
                         }else{
-                            alert(rs.error.message)
+                            layer.msg(rs.error.message, {time:1000});
 
                         }
 

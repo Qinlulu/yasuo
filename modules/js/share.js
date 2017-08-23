@@ -1,5 +1,5 @@
-define(["jquery","pageUrl", "PublicHead", "public","JqueryQrcode", "qrcode", "text!modules/str/share.html"],
-    function($,pageUrl, header,mc, jqrcode, qrcode, html) {
+define(["jquery","pageUrl", "PublicHead", "public","layer","JqueryQrcode", "qrcode", "text!modules/str/share.html"],
+    function($,pageUrl, header,mc,layer, jqrcode, qrcode, html) {
         function render() {
             $(".main").html(html);
             header.render("分享邀请")
@@ -11,7 +11,7 @@ define(["jquery","pageUrl", "PublicHead", "public","JqueryQrcode", "qrcode", "te
                 var json = api.JsonpArr(r);
                 api.call(json, api_url).done(function(rs) {
                     if(rs.error) {
-                        alert(rs.error.message)
+                        layer.msg(rs.error.message, {time:1000});
                     } else {
                         var data = rs.result.data;
                         $(".donghua").hide()
@@ -26,7 +26,7 @@ define(["jquery","pageUrl", "PublicHead", "public","JqueryQrcode", "qrcode", "te
                             var json = api.JsonpArr(r);
                             api.call(json,api_url).done(function(rs){
                                 if(rs.error){
-                                    alert(rs.error.message)
+                                    layer.msg(rs.error.message, {time:1000});
                                 }else{
                                     $(".donghua").hide()
                                     var data2 = rs.result.data;

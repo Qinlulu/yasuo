@@ -1,5 +1,5 @@
-define(["jquery","pageUrl","PublicHead","public","PublicAdvertis","text!modules/str/InAudit.html"],
-    function($,pageUrl,header,mc, tankuang, html){
+define(["jquery","pageUrl","PublicHead","public","layer","PublicAdvertis","text!modules/str/InAudit.html"],
+    function($,pageUrl,header,mc,layer, tankuang, html){
         function render(){
             $(".main").html(html);
             header.render("资料审核","remove")
@@ -22,7 +22,7 @@ define(["jquery","pageUrl","PublicHead","public","PublicAdvertis","text!modules/
                     var json = api.JsonpArr(r);
                     api.call(json, api_url).done(function (rs) {
                         if (rs.error) {
-                            alert(rs.error.message)
+                            layer.msg(rs.error.message, {time:1000});
                         }else{
                             window.location.href="#InAudit"
                         }
@@ -47,7 +47,7 @@ define(["jquery","pageUrl","PublicHead","public","PublicAdvertis","text!modules/
                     var json = api.JsonpArr(r);
                     api.call(json, api_url).done(function (rs) {
                         if (rs.error) {
-                            alert(rs.error.message)
+                            layer.msg(rs.error.message, {time:1000});
                         }else{
                             window.location.href="#InAudit"
                         }

@@ -1,5 +1,5 @@
-define(["jquery","pageUrl", "PublicHead","public", "touch", "text!modules/str/BorrowRecord.html"],
-    function ($,pageUrl, header,mc, touch, html) {
+define(["jquery","pageUrl", "PublicHead","public","layer", "touch", "text!modules/str/BorrowRecord.html"],
+    function ($,pageUrl, header,mc,layer, touch, html) {
         function render() {
             $(".main").html(html);
             header.render("借款记录")
@@ -17,7 +17,7 @@ define(["jquery","pageUrl", "PublicHead","public", "touch", "text!modules/str/Bo
                 var json = api.JsonpArr(r);
                 api.call(json, api_url).done(function (rs) {
                     if (rs.error) {
-                        alert(rs.error.message)
+                        layer.msg(rs.error.message, {time:1000});
                         $(".donghua").hide()
                     } else {
                         $(".donghua").hide()
@@ -104,7 +104,7 @@ define(["jquery","pageUrl", "PublicHead","public", "touch", "text!modules/str/Bo
                                                 $(window).scrollTop($(".ulsi").outerHeight())
                                                 getSwiperDatat(num);
                                                 $(".ulsi").unbind('touchstart');
-                                            },1500)
+                                            },1000)
                                         }else{
                                             $(".tishi").html("无数据")
                                             setTimeout(function(){

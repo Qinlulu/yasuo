@@ -131,7 +131,7 @@ define(["jquery","pageUrl","PublicHead","public","text!modules/str/InformList.ht
                                                     $(window).scrollTop(0)
                                                     getSwiperDatat(num);
                                                     $(".list_new").unbind('touchstart');
-                                                },1500)
+                                                },1000)
                                             }else{
                                                 $(".tishi").html("无数据")
                                                 setTimeout(function(){

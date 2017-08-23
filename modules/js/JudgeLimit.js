@@ -18,9 +18,9 @@ define(["jquery"], function ($) {
         } else if ( (xian * 1) < 1400* 1 && (xian * 1) < everydata.credit_amount * 1 ) {
             $ ( ".xian i" ).html ( "1400")
             $ ( ".content .uls li" ).eq ( 1 ).find ( "span" ).eq ( 1 ).find ( "i" ).html ( "1400" )
-        } else if ( (xian * 1) < 1500* 1 && (xian * 1) < everydata.credit_amount * 1 ) {
-            $ ( ".xian i" ).html ( "1500")
-            $ ( ".content .uls li" ).eq ( 1 ).find ( "span" ).eq ( 1 ).find ( "i" ).html ( "1500" )
+        } else if ( (xian * 1) < 1000* 1 && (xian * 1) < everydata.credit_amount * 1 ) {
+            $ ( ".xian i" ).html ( "1000")
+            $ ( ".content .uls li" ).eq ( 1 ).find ( "span" ).eq ( 1 ).find ( "i" ).html ( "1000" )
         } else if ( (xian * 1) < 1600* 1 && (xian * 1) < everydata.credit_amount * 1 ) {
             $ ( ".xian i" ).html ( "1600")
             $ ( ".content .uls li" ).eq ( 1 ).find ( "span" ).eq ( 1 ).find ( "i" ).html ( "1600" )
@@ -33,9 +33,9 @@ define(["jquery"], function ($) {
         } else if ( (xian * 1) < 1900* 1 && (xian * 1) < everydata.credit_amount * 1 ) {
             $ ( ".xian i" ).html ( "1900")
             $ ( ".content .uls li" ).eq ( 1 ).find ( "span" ).eq ( 1 ).find ( "i" ).html ( "1900" )
-        } else if ( (xian * 1) < 2000* 1 && (xian * 1) < everydata.credit_amount * 1 ) {
-            $ ( ".xian i" ).html ( "2000")
-            $ ( ".content .uls li" ).eq ( 1 ).find ( "span" ).eq ( 1 ).find ( "i" ).html ( "2000" )
+        } else if ( (xian * 1) < 1000* 1 && (xian * 1) < everydata.credit_amount * 1 ) {
+            $ ( ".xian i" ).html ( "1000")
+            $ ( ".content .uls li" ).eq ( 1 ).find ( "span" ).eq ( 1 ).find ( "i" ).html ( "1000" )
         } else if ( (xian * 1) < 2100* 1 && (xian * 1) < everydata.credit_amount * 1 ) {
             $ ( ".xian i" ).html ( "2100")
             $ ( ".content .uls li" ).eq ( 1 ).find ( "span" ).eq ( 1 ).find ( "i" ).html ( "2100" )

@@ -1,5 +1,5 @@
-define(["jquery","pageUrl","PublicHead", "public","text!modules/str/BorrowDetails.html"],
-    function ($,pageUrl,header,mc, html) {
+define(["jquery","pageUrl","PublicHead", "public","layer","text!modules/str/BorrowDetails.html"],
+    function ($,pageUrl,header,mc,layer,html) {
         function render() {
             $(".main").html(html);
             header.render("借款详情")
@@ -16,7 +16,7 @@ define(["jquery","pageUrl","PublicHead", "public","text!modules/str/BorrowDetail
                 var json = api.JsonpArr(r);
                 api.call(json, api_url).done(function (rs) {
                     if (rs.error) {
-                        alert(rs.error.message)
+                        layer.msg(rs.error.message, {time:1000});
                         $(".donghua").hide()
                     } else {
                         var data=rs.result.data
