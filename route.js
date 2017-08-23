@@ -19,6 +19,9 @@ define(["backbone","require"],function(){
             "BorrowRecord":"BorrowRecord",
             "BorrowDetails":"BorrowDetails",
             "AddBankCard":"AddBankCard",
+            "share":"share",
+            "CreditCoffers":"CreditCoffers",
+            "HelpCenter":"HelpCenter",
         },
         guidance:function () {
             require(["guidance"], function (guidance) {
@@ -110,6 +113,21 @@ define(["backbone","require"],function(){
                 AddBankCard.render();
             })
         },
+        share:function () {
+            require(["share"], function (share) {
+                share.render();
+            })
+        },
+        CreditCoffers:function () {
+            require(["CreditCoffers"], function (CreditCoffers) {
+                CreditCoffers.render();
+            })
+        },
+        HelpCenter:function () {
+            require(["HelpCenter"], function (HelpCenter) {
+                HelpCenter.render();
+            })
+        }
 
     });
     return new Router();

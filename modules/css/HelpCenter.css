@@ -1,0 +1,36 @@
+.HelpCenter {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+}
+.HelpCenter .slide {
+  margin: 0 auto;
+  width: 95%;
+  height: auto;
+  padding-bottom: 3rem;
+  font-size: 0.75rem;
+}
+.HelpCenter .slide li {
+  width: 100%;
+  font-size: 0.75rem;
+  line-height: 2.5rem;
+  border-bottom: 1px solid #eee;
+}
+.HelpCenter .slide li p {
+  text-indent: .8rem;
+  display: none;
+  line-height: 1.5rem;
+  color: #8e8e8e;
+}
+.HelpCenter .slide li span {
+  display: flex;
+}
+.HelpCenter .slide li span em {
+  flex: 1;
+}
+.HelpCenter .slide li span i img {
+  display: inline-block;
+  width: 1.25rem;
+  height: 0.875rem;
+  margin-top: 0.75rem;
+}

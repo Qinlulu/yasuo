@@ -9,6 +9,8 @@ require.config({
         "public": "https://imagecdn.xinyongjinku.com/wechat/lib/public",
         "ajaxsub":"https://imagecdn.xinyongjinku.com/wechat/lib/ajaxsub",
         'megapix':'https://imagecdn.xinyongjinku.com/wechat/lib/megapiximage',
+        'JqueryQrcode':'./lib/jquery.qrcode',
+        'qrcode':'./lib/qrcode',
         /*公用的部分*/
         "pageUrl":"modules/js/pageUrl",
         "check":"modules/js/PublicCheck",
@@ -36,6 +38,9 @@ require.config({
         "BorrowRecord":"modules/js/BorrowRecord",
         "BorrowDetails":"modules/js/BorrowDetails",
         "AddBankCard":"modules/js/AddBankCard",
+        "share":"modules/js/share",
+        "CreditCoffers":"modules/js/CreditCoffers",
+        "HelpCenter":"modules/js/HelpCenter",
 
     }
 })
