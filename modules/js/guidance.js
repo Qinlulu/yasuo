@@ -1,11 +1,8 @@
-define(["jquery","pageUrl","public","text!modules/str/guidance.html"],
-    function($,pageUrl,mc,html){
+define(["jquery","pageUrl","public","layer","text!modules/str/guidance.html"],
+    function($,pageUrl,mc,layer,html){
     function render() {
         $(".main").html(html);
-        console.log(pageUrl.render())
-        $(".main").on("click",function () {
-            window.location.href="#Loginphone"
-        })
+        layer.msg('信用金库欢迎您', {time:1500});
         $(".cash").on("click",function () {
             var api_url = pageUrl.render()+".xinyongjinku.com/passport/user.php?c=account";
             getSwiperData();

@@ -11,6 +11,7 @@ require.config({
         'megapix':'https://imagecdn.xinyongjinku.com/wechat/lib/megapiximage',
         'JqueryQrcode':'./lib/jquery.qrcode',
         'qrcode':'./lib/qrcode',
+        "layer":"./lib/layer",
         /*公用的部分*/
         "pageUrl":"modules/js/pageUrl",
         "check":"modules/js/PublicCheck",
@@ -18,6 +19,7 @@ require.config({
         "PublicFooter":"modules/js/PublicFooter",
         "PublicPassWord":"modules/js/PublicPassWord",
         "PublicAdvertis":"modules/js/PublicAdvertis",
+
         /*判断额度*/
         "JudgeLimit":"modules/js/JudgeLimit",
 
@@ -55,7 +57,7 @@ require(["backbone", "route"], function () {
     Backbone.history.start();
     var rule = window.location.hash;
     //if ( rule.split('?')[0] != '#zhimayin' && rule.split('?')[0] != '#yindao' && rule.split('?')[0] != '#shenhez'){
-        location.hash = "RepaymentPage";
+        location.hash = "guidance";
     //}
 })
 
