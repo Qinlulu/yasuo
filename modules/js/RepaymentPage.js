@@ -1,11 +1,10 @@
 define(["jquery", "pageUrl","PublicHead","public", "text!modules/str/RepaymentPage.html"],
-    function ($,pageUrl, header,mc, cc, html) {
+    function ($,pageUrl, header,mc,html) {
         function render() {
             $(".main").html(html);
             header.render("我要还款")
             $(".donghua").show()
             var api_url = pageUrl.render()+".xinyongjinku.com/passport/order.php?c=index";
-
             getSwiperDatat()
             function getSwiperDatat() {
                 var r = ["listofBorrowings"];
