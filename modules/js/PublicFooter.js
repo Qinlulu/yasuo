@@ -85,7 +85,7 @@ define ( [ "jquery" ,"pageUrl", "public" , "text!modules/str/PublicFooter.html"]
                                                     window.location.href = "#AuthenticationSesameScore"  //renzhengzhima
                                                 } else if ( everydata.information_step == 4 ) {
                                                     if ( everydata.credit_status != 1 ) {
-                                                        window.location.href = "#auditing"   //shenhez
+                                                        window.location.href = "#InAudit"   //shenhez
                                                     } else {
                                                         //判断是否有借款记录
                                                         var api_url = pageUrl.render()+".xinyongjinku.com/passport/order.php?c=index";
@@ -102,7 +102,7 @@ define ( [ "jquery" ,"pageUrl", "public" , "text!modules/str/PublicFooter.html"]
                                                                 } else {
                                                                     $ ( ".donghua" ).hide ()
                                                                     if ( rs.result.data.totalmoney.totalmoney == 0 ) {
-                                                                        window.location.href = "#Outstanding"  //huankuanwei
+                                                                        window.location.href = "#UnPayment"  //huankuanwei
                                                                     } else {
                                                                         window.location.href = "#RepaymentPage"   //woyaohuankuan
                                                                     }
@@ -128,7 +128,7 @@ define ( [ "jquery" ,"pageUrl", "public" , "text!modules/str/PublicFooter.html"]
                                                         } else {
                                                             $ ( ".donghua" ).hide ()
                                                             if ( rs.result.data.totalmoney.totalmoney == 0 ) {
-                                                                window.location.href = "#Outstanding"   //huankuanwei
+                                                                window.location.href = "#UnPayment"   //huankuanwei
                                                             } else {
                                                                 window.location.href = "#RepaymentPage"   //woyaohuankuan
                                                             }

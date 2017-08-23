@@ -39,7 +39,7 @@ define(["jquery","pageUrl", "PublicHead","public","text!modules/str/BankCardSett
                                 window.location.href = "#AuthenticationSesameScore"
                             } else if (everydata.information_step == 4) {
                                 if (everydata.credit_status != 1) {
-                                    window.location.href = "#auditing"
+                                    window.location.href = "#InAudit"
                                 }
                             }
                         } else if (everydata.credit_status == 2) {

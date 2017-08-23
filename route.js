@@ -24,6 +24,7 @@ define(["backbone","require"],function(){
             "HelpCenter":"HelpCenter",
             "configuration":"configuration",
             "InformList":"InformList",
+            "InAudit":"InAudit",
         },
         guidance:function () {
             require(["guidance"], function (guidance) {
@@ -138,6 +139,11 @@ define(["backbone","require"],function(){
         InformList:function () {
             require(["InformList"], function (InformList) {
                 InformList.render();
+            })
+        },
+        InAudit:function () {
+            require(["InAudit"], function (InAudit) {
+                InAudit.render();
             })
         }
 

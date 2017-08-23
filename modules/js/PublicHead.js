@@ -15,7 +15,7 @@ define(["jquery","pageUrl","text!modules/str/PublicHead.html"],
 
             $ ( ".back" ).on ( "click" , function () {
                 if ( $ ( ".renzhengshouji" ).length == 1 || $ ( ".renzhengzhima" ).length == 1 ) {
-                    window.location.href = "#jiekuanzhu"
+                    window.location.href = "#HomePage"
                 } else {
                     $ ( ".main" ).css ( "height" , "100%" )
                     window.history.back ()

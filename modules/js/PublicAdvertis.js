@@ -6,7 +6,7 @@ define(["jquery","text!modules/str/PublicAdvertis.html"],function($, html){
             event.stopPropagation();
         })
         var rule = window.location.hash;
-        if ( rule.split('?')[0] == '#jiekuanzhong' ) {
+        if ( rule.split('?')[0] == '#InLoan' ) {
             $(".Advertisement").css({
                 "background": "url('https://imagecdn.xinyongjinku.com/wechat/modules/images/tie@v1.1.0.png') center",
                 "background-size": "cover"
@@ -18,7 +18,7 @@ define(["jquery","text!modules/str/PublicAdvertis.html"],function($, html){
                 window.location.href = "https://jie.yihuangjin.com/wechat/#qudao?terminal=6&source_id=2"
             })
         }
-        if ( rule.split('?')[0] == '#huankuanzhong' ){
+        if ( rule.split('?')[0] == '#paymenting' ){
             $(".Advertisement").css({
                 "background": "url('https://imagecdn.xinyongjinku.com/wechat/modules/images/chakan@v1.1.0.png') center",
                 "background-size": "cover"
@@ -30,7 +30,7 @@ define(["jquery","text!modules/str/PublicAdvertis.html"],function($, html){
                 window.location.href="https://jie.yihuangjin.com/wechat/#qudao?terminal=7&source_id=2"
             })
         }
-        if ( rule.split('?')[0] == '#shenhes' ){
+        if ( rule.split('?')[0] == '#FailAudit' ){
             $(".Advertisement").css({
                 "background": "url('https://imagecdn.xinyongjinku.com/wechat/modules/images/shouxin@v1.1.0.png') center",
                 "background-size": "cover"

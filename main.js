@@ -43,6 +43,7 @@ require.config({
         "HelpCenter":"modules/js/HelpCenter",
         "configuration":"modules/js/configuration",
         "InformList":"modules/js/InformList",
+        "InAudit":"modules/js/InAudit",
 
     }
 })

@@ -12,7 +12,7 @@ define(["jquery","pageUrl", "public","text!modules/str/MinePage.html"],
                     if (rs.error) {
                     } else {
                         if(rs.result.data.isLogin==0){
-                            window.location.href = "#zhucezhang"
+                            window.location.href = "#RegistrationPage"
                         }else{
                             var name = rs.result.data.user_name.substring(0, 1) + "**"
                             $(".headers dl dd").find("p").eq(0).html(name)

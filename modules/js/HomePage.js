@@ -31,7 +31,7 @@ define(["jquery","pageUrl", "touch", "PublicFooter",
             //添加通知页面
 
             $(".inform").on("click", function() {
-                window.location.href = "#InformList"
+                window.location.href = "#"
             })
 
             if(localStorage.getItem("tankuang")) {} else {
@@ -285,7 +285,7 @@ define(["jquery","pageUrl", "touch", "PublicFooter",
                         window.location.href = "#AuthenticationSesameScore"
                     } else if(everydata.information_step == 4) {
                         if(everydata.credit_status != 1) {
-                            window.location.href = "#auditing"  //shenhez
+                            window.location.href = "#InAudit"  //shenhez
                         } else {
                             window.location.href = "#LoanPage" //jiekuanxinxi
                         }

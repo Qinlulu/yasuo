@@ -1,0 +1,13 @@
+.InAudit {
+  width: 100%;
+}
+.InAudit .imgs {
+  width: 100%;
+  height: auto;
+}
+.InAudit .imgs img {
+  width: 100%;
+}
+.InAudit button {
+  margin: 0 auto;
+}
