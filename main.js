@@ -16,13 +16,13 @@ require.config({
         "PublicAdvertis":"modules/js/PublicAdvertis",
         "JudgeLimit":"modules/js/JudgeLimit",
         "guidance":"modules/js/guidance",
-        "loginphone":"modules/js/LoginPhone",
+        "Loginphone":"modules/js/Loginphone",
         "pageUrl":"modules/js/pageUrl",
         "LoginPassword":"modules/js/LoginPassword",
         "RegistrationPage":"modules/js/RegistrationPage",
         "ModifyPassword":"modules/js/ModifyPassword",
         "HomePage":"modules/js/HomePage",
-        "CoffersPage":"modules/js/HomePage",
+        "CoffersPage":"modules/js/CoffersPage",
         "MinePage":"modules/js/MinePage",
         "RepaymentPage":"modules/js/RepaymentPage",
         "UnPayment":"modules/js/UnPayment",
@@ -40,8 +40,8 @@ require.config({
 require(["backbone", "route"], function () {
     Backbone.history.start();
     var rule = window.location.hash;
-    if ( rule.split('?')[0] != '#zhimayin' && rule.split('?')[0] != '#yindao' && rule.split('?')[0] != '#shenhez'){
-        location.hash = "guidance";
-    }
+    //if ( rule.split('?')[0] != '#zhimayin' && rule.split('?')[0] != '#yindao' && rule.split('?')[0] != '#shenhez'){
+        location.hash = "RepaymentPage";
+    //}
 })
 
