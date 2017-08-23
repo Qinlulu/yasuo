@@ -42,6 +42,7 @@ require.config({
         "CreditCoffers":"modules/js/CreditCoffers",
         "HelpCenter":"modules/js/HelpCenter",
         "configuration":"modules/js/configuration",
+        "InformList":"modules/js/InformList",
 
     }
 })

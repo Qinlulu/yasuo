@@ -31,7 +31,7 @@ define(["jquery","pageUrl", "touch", "PublicFooter",
             //添加通知页面
 
             $(".inform").on("click", function() {
-                window.location.href = "#inform"
+                window.location.href = "#InformList"
             })
 
             if(localStorage.getItem("tankuang")) {} else {

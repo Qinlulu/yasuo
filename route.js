@@ -23,6 +23,7 @@ define(["backbone","require"],function(){
             "CreditCoffers":"CreditCoffers",
             "HelpCenter":"HelpCenter",
             "configuration":"configuration",
+            "InformList":"InformList",
         },
         guidance:function () {
             require(["guidance"], function (guidance) {
@@ -133,8 +134,12 @@ define(["backbone","require"],function(){
             require(["configuration"], function (configuration) {
                 configuration.render();
             })
+        },
+        InformList:function () {
+            require(["InformList"], function (InformList) {
+                InformList.render();
+            })
         }
-
 
     });
     return new Router();
