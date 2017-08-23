@@ -22,3 +22,5 @@
 @import "configuration.css";
 @import "InformList.css";
 @import "InAudit.css";
+@import "FailAudit.css";
+@import "SuccessAudit.css";

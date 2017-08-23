@@ -25,6 +25,8 @@ define(["backbone","require"],function(){
             "configuration":"configuration",
             "InformList":"InformList",
             "InAudit":"InAudit",
+            "FailAudit":"FailAudit",
+            "SuccessAudit":"SuccessAudit"
         },
         guidance:function () {
             require(["guidance"], function (guidance) {
@@ -144,6 +146,16 @@ define(["backbone","require"],function(){
         InAudit:function () {
             require(["InAudit"], function (InAudit) {
                 InAudit.render();
+            })
+        },
+        FailAudit:function () {
+            require(["FailAudit"], function (FailAudit) {
+                FailAudit.render();
+            })
+        },
+        SuccessAudit:function () {
+            require(["SuccessAudit"], function (SuccessAudit) {
+                SuccessAudit.render();
             })
         }
 
