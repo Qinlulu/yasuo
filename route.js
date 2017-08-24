@@ -27,7 +27,9 @@ define(["backbone","require"],function(){
             "InAudit":"InAudit",
             "FailAudit":"FailAudit",
             "SuccessAudit":"SuccessAudit",
-            "InformDetails":"InformDetails"
+            "InformDetails":"InformDetails",
+            "LoanPage":"LoanPage",
+            "InLoan":"InLoan"
         },
         guidance:function () {
             require(["guidance"], function (guidance) {
@@ -162,6 +164,16 @@ define(["backbone","require"],function(){
         InformDetails:function () {
             require(["InformDetails"], function (InformDetails) {
                 InformDetails.render();
+            })
+        },
+        LoanPage:function () {
+            require(["LoanPage"], function (LoanPage) {
+                LoanPage.render();
+            })
+        },
+        InLoan:function () {
+            require(["InLoan"], function (InLoan) {
+                InLoan.render();
             })
         }
 
