@@ -38,6 +38,7 @@ define(["backbone","require"],function(){
             "OperatorAgreement":"OperatorAgreement",
             "RegistrationAgreement":"RegistrationAgreement",
             "LoanAgreement":"LoanAgreement",
+            "SesameGuide":"SesameGuide",
 
 
         },
@@ -224,6 +225,11 @@ define(["backbone","require"],function(){
         LoanAgreement:function () {
             require(["LoanAgreement"], function (LoanAgreement) {
                 LoanAgreement.render();
+            })
+        },
+        SesameGuide:function () {
+            require(["SesameGuide"], function (SesameGuide) {
+                SesameGuide.render();
             })
         }
 

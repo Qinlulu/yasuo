@@ -50,11 +50,12 @@ require.config({
         "InAudit":"modules/js/InAudit",
         "FailAudit":"modules/js/FailAudit",
         "SuccessAudit":"modules/js/SuccessAudit",
-        /*四步授信：认证实名,认证个人,认证手机，认证芝麻*/
+        /*四步授信：认证实名,认证个人,认证手机，认证芝麻,芝麻引*/
         "AuthenticationIdentityCard":"modules/js/AuthenticationIdentityCard",
         "AuthenticationInformation":"modules/js/AuthenticationInformation",
         "AuthenticationPhoneNumber":"modules/js/AuthenticationPhoneNumber",
         "AuthenticationSesameScore":"AuthenticationSesameScore",
+        "SesameGuide":"SesameGuide",
         /*联系人信息，工作信息*/
         "ContactInformation":"ContactInformation",
         "JobInformation":"JobInformation",
