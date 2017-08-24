@@ -24,11 +24,10 @@ define(["jquery","pageUrl","PublicHead","public","layer","PublicAdvertis","text!
                         if (rs.error) {
                             layer.msg(rs.error.message, {time:1000});
                         }else{
-                            window.location.href="#InAudit"
+                            window.location.href="#SesameGuide"
                         }
                     })
                 }
-                //window.location.href="#shenhez"
             }else if(rule.split("?")[1].split("&")[5].split("=")[1]!="true"){
                 window.location.href="#FailAudit"
             }else{

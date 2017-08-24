@@ -54,16 +54,15 @@ require.config({
         "AuthenticationIdentityCard":"modules/js/AuthenticationIdentityCard",
         "AuthenticationInformation":"modules/js/AuthenticationInformation",
         "AuthenticationPhoneNumber":"modules/js/AuthenticationPhoneNumber",
-        "AuthenticationSesameScore":"AuthenticationSesameScore",
-        "SesameGuide":"SesameGuide",
+        "AuthenticationSesameScore":"modules/js/AuthenticationSesameScore",
+        "SesameGuide":"modules/js/SesameGuide",
         /*联系人信息，工作信息*/
-        "ContactInformation":"ContactInformation",
-        "JobInformation":"JobInformation",
+        "ContactInformation":"modules/js/ContactInformation",
+        "JobInformation":"modules/js/JobInformation",
         /*运营商协议,注册协议，借款协议*/
-        "OperatorAgreement":"OperatorAgreement",
-        "RegistrationAgreement":"RegistrationAgreement",
-        "LoanAgreement":"LoanAgreement",
-
+        "OperatorAgreement":"modules/js/OperatorAgreement",
+        "RegistrationAgreement":"modules/js/RegistrationAgreement",
+        "LoanAgreement":"modules/js/LoanAgreement",
         /*设置*/
         "configuration":"modules/js/configuration",
         /*通知，通知列表*/
@@ -73,8 +72,6 @@ require.config({
         "share":"modules/js/share",
         "CreditCoffers":"modules/js/CreditCoffers",
         "HelpCenter":"modules/js/HelpCenter"
-
-
     }
 })
 
