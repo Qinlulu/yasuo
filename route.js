@@ -29,7 +29,17 @@ define(["backbone","require"],function(){
             "SuccessAudit":"SuccessAudit",
             "InformDetails":"InformDetails",
             "LoanPage":"LoanPage",
-            "InLoan":"InLoan"
+            "InLoan":"InLoan",
+            "AuthenticationInformation":"AuthenticationInformation",
+            "AuthenticationPhoneNumber":"AuthenticationPhoneNumber",
+            "AuthenticationSesameScore":"AuthenticationSesameScore",
+            "ContactInformation":"ContactInformation",
+            "JobInformation":"JobInformation",
+            "OperatorAgreement":"OperatorAgreement",
+            "RegistrationAgreement":"RegistrationAgreement",
+            "LoanAgreement":"LoanAgreement",
+
+
         },
         guidance:function () {
             require(["guidance"], function (guidance) {
@@ -174,6 +184,46 @@ define(["backbone","require"],function(){
         InLoan:function () {
             require(["InLoan"], function (InLoan) {
                 InLoan.render();
+            })
+        },
+        AuthenticationInformation:function () {
+            require(["AuthenticationInformation"], function (AuthenticationInformation) {
+                AuthenticationInformation.render();
+            })
+        },
+        AuthenticationPhoneNumber:function () {
+            require(["AuthenticationPhoneNumber"], function (AuthenticationPhoneNumber) {
+                AuthenticationPhoneNumber.render();
+            })
+        },
+        AuthenticationSesameScore:function () {
+            require(["AuthenticationSesameScore"], function (AuthenticationSesameScore) {
+                AuthenticationSesameScore.render();
+            })
+        },
+        ContactInformation:function () {
+            require(["ContactInformation"], function (ContactInformation) {
+                ContactInformation.render();
+            })
+        },
+        JobInformation:function () {
+            require(["JobInformation"], function (JobInformation) {
+                JobInformation.render();
+            })
+        },
+        OperatorAgreement:function () {
+            require(["OperatorAgreement"], function (OperatorAgreement) {
+                OperatorAgreement.render();
+            })
+        },
+        RegistrationAgreement:function () {
+            require(["RegistrationAgreement"], function (RegistrationAgreement) {
+                RegistrationAgreement.render();
+            })
+        },
+        LoanAgreement:function () {
+            require(["LoanAgreement"], function (LoanAgreement) {
+                LoanAgreement.render();
             })
         }
 
