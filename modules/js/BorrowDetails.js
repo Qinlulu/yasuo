@@ -16,7 +16,7 @@ define(["jquery","pageUrl","PublicHead", "public","layer","text!modules/str/Borr
                 var json = api.JsonpArr(r);
                 api.call(json, api_url).done(function (rs) {
                     if (rs.error) {
-                        layer.msg(rs.error.message, {time:1000});
+                        layer.msg(rs.error.message, {time:2000});
                         $(".donghua").hide()
                     } else {
                         var data=rs.result.data

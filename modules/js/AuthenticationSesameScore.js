@@ -18,7 +18,7 @@ define(["jquery","pageUrl","PublicHead", "check","public","layer", "text!modules
                     api.call(json, api_url).done(function (rs) {
                         if (rs.error) {
                             $(".donghua").hide()
-                            layer.msg(rs.error.message, {time:1000});
+                            layer.msg(rs.error.message, {time:2000});
                         } else {
                             $.ajax({
                                 url:pageUrl.render()+".xinyongjinku.com/wechat/modules/phpscript/getUrl.php",

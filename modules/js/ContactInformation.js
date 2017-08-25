@@ -64,7 +64,7 @@ define(["jquery","layer","text!modules/str/ContactInformation.html"],
                 var A = $(this).val().replace(/(^\s+)|(\s+$)/g, "");
                 var reg = /^[\u4e00-\u9fa5]{2,4}$/
                 if (!reg.test(A)) {
-                    layer.msg('ֻ姓名格式不正确', {time:1000});
+                    layer.msg('ֻ姓名格式不正确', {time:2000});
                     $(this).val("")
                     return;
                 }
@@ -78,7 +78,7 @@ define(["jquery","layer","text!modules/str/ContactInformation.html"],
                 var A = $(this).val().replace(/(^\s+)|(\s+$)/g, "");
                 var reg = /^[\u4e00-\u9fa5]{2,4}$/
                 if (!reg.test(A)) {
-                    layer.msg('ֻ姓名格式不正确', {time:1000});
+                    layer.msg('ֻ姓名格式不正确', {time:2000});
                     $(this).val("")
                     return;
                 }
@@ -94,14 +94,14 @@ define(["jquery","layer","text!modules/str/ContactInformation.html"],
                 var A = $(this).val()
                 var reg = /^(0|86|17951)?(13[0-9]|15[012356789]|17[678]|18[0-9]|14[57])[0-9]{8}$/
                 if (!reg.test(A)) {
-                    layer.msg("请输入正确手机号码", {time:1000});
+                    layer.msg("请输入正确手机号码", {time:2000});
                     $(this).val("")
                 }
             }else{
 
             }
             if($(this).val()==localStorage.getItem("phone")){
-                layer.msg("与注册手机号码相同", {time:1000});
+                layer.msg("与注册手机号码相同", {time:2000});
                 return
             }
         });
@@ -111,7 +111,7 @@ define(["jquery","layer","text!modules/str/ContactInformation.html"],
                 var A = $(this).val()
                 var reg = /^(0|86|17951)?(13[0-9]|15[012356789]|17[678]|18[0-9]|14[57])[0-9]{8}$/
                 if (!reg.test(A)) {
-                    layer.msg("请输入正确手机号码", {time:1000});
+                    layer.msg("请输入正确手机号码", {time:2000});
                     $(this).val("")
                     return
                 }
@@ -119,7 +119,7 @@ define(["jquery","layer","text!modules/str/ContactInformation.html"],
 
             }
             if($(this).val()==localStorage.getItem("phone")){
-                layer.msg("与注册手机号码相同", {time:1000});
+                layer.msg("与注册手机号码相同", {time:2000});
                 return
 
             }
@@ -141,18 +141,18 @@ define(["jquery","layer","text!modules/str/ContactInformation.html"],
 
             for(var i=0;i<$(".cont ul li").length;i++) {
                 if ($(".cont ul li").eq(i).find("span").eq(1).html() == "" || $(".cont ul li").eq(i).find("input").val() == "") {
-                    layer.msg("将信息填写完整", {time:1000});
+                    layer.msg("将信息填写完整", {time:2000});
                     return
                 }
             }
 
             if($(".cont ul li").eq(0).find("span").eq(1).text()=="配偶2" && $(".cont ul li").eq(3).find("span").eq(1).text()=="配偶2"){
-                layer.msg("配偶不可以重复", {time:1000});
+                layer.msg("配偶不可以重复", {time:2000});
                 return
             }
 
             if($(".cont ul li").eq(2).find("input").val()==$(".cont ul li").eq(5).find("input").val()){
-                layer.msg("联系方式不可以重复", {time:1000});
+                layer.msg("联系方式不可以重复", {time:2000});
                 return
             }
 

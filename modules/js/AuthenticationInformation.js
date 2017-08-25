@@ -168,27 +168,27 @@ define(["jquery", "pageUrl", "public","layer", "text!modules/str/AuthenticationI
         }
         $(".goshouji").on("click", function () {
             if ($(".cont ul li").eq(0).find("input").val() == "") {
-                layer.msg("将填写居住地址", {time:1000});
+                layer.msg("将填写居住地址", {time:2000});
                 return
             }
             if ($(".cont ul li").eq(1).find("input").val() == "") {
-                layer.msg("将填写详细居住地址", {time:1000});
+                layer.msg("将填写详细居住地址", {time:2000});
                 return
             }
             if ($(".cont ul li").eq(2).find("span").eq(1).html() == "") {
-                layer.msg("请填写居住时长", {time:1000});
+                layer.msg("请填写居住时长", {time:2000});
                 return
             }
             if ($(".cont ul li").eq(3).find("span").eq(1).html() == "") {
-                layer.msg("请填写教育程度", {time:1000});
+                layer.msg("请填写教育程度", {time:2000});
                 return
             }
             if ($(".cont ul li").eq(4).find("span").eq(1).html() == "") {
-                layer.msg("请填写婚姻状况", {time:1000});
+                layer.msg("请填写婚姻状况", {time:2000});
                 return
             }
             if ($(".cont ul li").eq(5).find("span").eq(1).html() == "") {
-                layer.msg("请填写收入情况", {time:1000});
+                layer.msg("请填写收入情况", {time:2000});
                 return
             }
             //获取的联系人信息
@@ -196,11 +196,11 @@ define(["jquery", "pageUrl", "public","layer", "text!modules/str/AuthenticationI
             //获取的工作信息
             var gongzuo = JSON.parse(sessionStorage.getItem("gongzuo"))
             if (!lianxiren) {
-                layer.msg("请填写联系人信息", {time:1000});
+                layer.msg("请填写联系人信息", {time:2000});
                 return
             }
             if (!gongzuo) {
-                layer.msg("请填写工作信息", {time:1000});
+                layer.msg("请填写工作信息", {time:2000});
                 return
             }
             var geocoder = new AMap.Geocoder({});
@@ -234,11 +234,11 @@ define(["jquery", "pageUrl", "public","layer", "text!modules/str/AuthenticationI
             //获取的居住位置的定位
             var juzhudiweist = JSON.parse(sessionStorage.getItem("juzhudiweiit"))
             if (!gongsidingweis) {
-                layer.msg("正在解析公司位置  点击关闭此框", {time:1000});
+                layer.msg("正在解析公司位置", {time:2000});
                 return
             }
             if (!juzhudiweis) {
-                layer.msg("正在解析居住地位置  点击关闭此框", {time:1000});
+                layer.msg("正在解析居住地位置", {time:2000});
                 return
             }
             var api_url = pageUrl.render() + ".xinyongjinku.com/passport/user.php?c=account";
@@ -312,7 +312,7 @@ define(["jquery", "pageUrl", "public","layer", "text!modules/str/AuthenticationI
                 var json = api.JsonpArr(r);
                 api.call(json, api_url).done(function (rs) {
                     if (rs.error) {
-                        layer.msg(rs.error.message, {time:1000});
+                        layer.msg(rs.error.message, {time:2000});
                     } else {
                         window.location.href = "#AuthenticationPhoneNumber"
                     }

@@ -17,7 +17,7 @@ define(["jquery","pageUrl", "PublicHead", "public","layer", "text!modules/str/In
                 api.call(json, api_url)
                     .done(function(rs) {
                         if(rs.error) {
-                            layer.msg(rs.error.message, {time:1000});
+                            layer.msg(rs.error.message, {time:2000});
                         } else {
                             console.log(rs)
                             var str = rs.result.data.content;

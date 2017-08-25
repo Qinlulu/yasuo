@@ -70,7 +70,7 @@ define(["jquery","layer"],function($,layer){
             var A = $(this).val()
             var reg = /^(0|86|17951)?(13[0-9]|15[012356789]|17[678]|18[0-9]|14[57])[0-9]{8}$/
             if (!reg.test(A)) {
-                layer.msg('请输入正确手机号码', {time:1000});
+                layer.msg('请输入正确手机号码', {time:2000});
                 return
             }
         })

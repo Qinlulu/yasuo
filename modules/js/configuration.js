@@ -13,7 +13,7 @@ define(["jquery","pageUrl","PublicHead","check",'public',"layer","text!modules/s
 
                     api.call(json, api_url).done(function (rs) {
                         if (rs.error) {
-                            layer.msg(rs.error.message, {time:1000});
+                            layer.msg(rs.error.message, {time:2000});
                         } else {
                             sessionStorage.clear();
                             localStorage.clear();

@@ -21,19 +21,19 @@ define(["jquery", "pageUrl", "public", "ajaxsub", "layer","text!modules/str/Auth
                         if (rs.error.message == "用户未登录") {
                             window.location.href = "#RegistrationPage"
                         } else {
-                            layer.msg(rs.error.message, {time:1000});
+                            layer.msg(rs.error.message, {time:2000});
                         }
                     } else {
                         var cunchuAjax = {}
                         cunchuAjax.url = rs.result.data.msg
                         if (!window.FileReader) {
-                            layer.msg('浏览器不支持文件获取', {time:1000});
+                            layer.msg('浏览器不支持文件获取', {time:2000});
                         } else {
                             $(".file1").on("change", function () {
                                 $(".donghua").show()
                                 var file = document.querySelector(".file1").files[0];
                                 if (!/image\/\w+/.test(file.type)) {
-                                    layer.msg('需要的是图片', {time:1000});
+                                    layer.msg('需要的是图片', {time:2000});
 
                                     return false;
                                 }
@@ -82,7 +82,7 @@ define(["jquery", "pageUrl", "public", "ajaxsub", "layer","text!modules/str/Auth
                                                 cunchuAjax.renzheng = data.err_msg
                                                 $(".donghua").hide()
                                             } else {
-                                               layer.msg('失败了', {time:1000})
+                                               layer.msg('失败了', {time:2000})
                                                 $(".donghua").hide()
                                             }
                                         }
@@ -93,7 +93,7 @@ define(["jquery", "pageUrl", "public", "ajaxsub", "layer","text!modules/str/Auth
                                 $(".donghua").show()
                                 var file = document.querySelector(".file2").files[0];
                                 if (!/image\/\w+/.test(file.type)) {
-                                    layer.msg('需要的是图片', {time:1000});
+                                    layer.msg('需要的是图片', {time:2000});
                                     return false;
                                 }
                                 var canvas = document.createElement("canvas");
@@ -141,7 +141,7 @@ define(["jquery", "pageUrl", "public", "ajaxsub", "layer","text!modules/str/Auth
                                                 cunchuAjax.renfan = data.err_msg
                                                 $(".donghua").hide()
                                             } else {
-                                               layer.msg('失败了', {time:1000});
+                                               layer.msg('失败了', {time:2000});
                                                 $(".donghua").hide()
                                             }
                                         }
@@ -151,7 +151,7 @@ define(["jquery", "pageUrl", "public", "ajaxsub", "layer","text!modules/str/Auth
                             $(".file3").on("change", function () {
                                 var file = document.querySelector(".file3").files[0];
                                 if (!/image\/\w+/.test(file.type)) {
-                                    layer.msg('需要的是图片', {time:1000});
+                                    layer.msg('需要的是图片', {time:2000});
 
                                     return false;
                                 }
@@ -176,7 +176,7 @@ define(["jquery", "pageUrl", "public", "ajaxsub", "layer","text!modules/str/Auth
                             var reg = /^[\u4e00-\u9fa5]{2,4}$/
                             if (A == "") {
                             } else if (!reg.test(A)) {
-                                layer.msg('ֻ姓名格式不正确', {time:1000});
+                                layer.msg('ֻ姓名格式不正确', {time:2000});
                                 $(this).val("");
                                 return;
                             }
@@ -186,18 +186,18 @@ define(["jquery", "pageUrl", "public", "ajaxsub", "layer","text!modules/str/Auth
                             var reg1 = /^(^[1-9]\d{7}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{3}$)|(^[1-9]\d{5}[1-9]\d{3}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])((\d{4})|\d{3}[Xx])$)$/
                             if (A == "") {
                             } else if (!reg1.test(A)) {
-                                layer.msg('ֻ身份证号码格式不正确', {time:1000});
+                                layer.msg('ֻ身份证号码格式不正确', {time:2000});
                                 $(this).val("");
                                 return;
                             }
                         });
                         $(".gogeren").on("click", function () {
                             if ($(".xingming").val() == "" || $(".shenfens").val() == "") {
-                                layer.msg('完善数据', {time:1000});
+                                layer.msg('完善数据', {time:2000});
                                 return
                             }
                             if (!cunchuAjax.renzheng || !cunchuAjax.renfan || !cunchuAjax.renlian) {
-                                layer.msg('完善数据', {time:1000});
+                                layer.msg('完善数据', {time:2000});
                                 return
                             }
                             $(".donghua").show()
@@ -223,7 +223,7 @@ define(["jquery", "pageUrl", "public", "ajaxsub", "layer","text!modules/str/Auth
                                 console.log(json)
                                 api.call(json, api_url).done(function (rs) {
                                     if (rs.error) {
-                                        layer.msg(rs.error.message, {time:1000});
+                                        layer.msg(rs.error.message, {time:2000});
                                         $(".donghua").hide()
                                     } else {
                                         $(".donghua").hide()

@@ -2,7 +2,7 @@ define(["jquery","pageUrl","public","layer","text!modules/str/guidance.html"],
     function($,pageUrl,mc,layer,html){
     function render() {
         $(".main").html(html);
-        layer.msg('信用金库欢迎您', {time:1000});
+        layer.msg('信用金库欢迎您', {time:2000});
         $(".cash").on("click",function () {
             var api_url = pageUrl.render()+".xinyongjinku.com/passport/user.php?c=account";
             getSwiperData();
@@ -11,7 +11,7 @@ define(["jquery","pageUrl","public","layer","text!modules/str/guidance.html"],
                 var json = api.JsonpArr(r);
                 api.call(json,api_url).done(function (rs) {
                     if(rs.error){
-                        layer.msg(rs.error.message, {time:1000});
+                        layer.msg(rs.error.message, {time:2000});
                     }else {
                         $(".donghau").hide()
                         if(rs.result.status == 0){

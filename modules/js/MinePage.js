@@ -25,7 +25,7 @@ define(["jquery","pageUrl", "public","layer","text!modules/str/MinePage.html"],
             }
 
             $(".wechats").on("click",function(){
-                layer.msg('公众号已复制，去微信搜索添加', {time:1000});
+                layer.msg('公众号已复制，去微信搜索添加', {time:2000});
 
             })
             $(".wechats").find("span").eq(2).css("color","#CC9F68")

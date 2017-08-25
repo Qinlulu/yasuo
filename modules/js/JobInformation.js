@@ -72,7 +72,7 @@ define(["jquery","layer","text!modules/str/JobInformation.html"],
         $(".goshang").on("click",function(){
             for(var i=1;i<$(".cont ul li").length-1;i++) {
                 if ($(".cont ul li").eq(i).find("input").val() == "") {
-                    layer.msg("将表单填写完整", {time:1000});
+                    layer.msg("将表单填写完整", {time:2000});
                     return
                 }
             }

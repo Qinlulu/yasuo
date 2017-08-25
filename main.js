@@ -78,8 +78,8 @@ require.config({
 require(["backbone", "route"], function () {
     Backbone.history.start();
     var rule = window.location.hash;
-    //if ( rule.split('?')[0] != '#zhimayin' && rule.split('?')[0] != '#yindao' && rule.split('?')[0] != '#shenhez'){
-        location.hash = "guidance";
-    //}
+    if ( rule.split('?')[0] != '#SesameGuide' && rule.split('?')[0] != '#yindao' && rule.split('?')[0] != '#InAudit'){
+        location.hash = "yindao";
+    }
 })
 

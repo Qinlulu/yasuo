@@ -15,7 +15,7 @@ define(["jquery", "pageUrl","PublicHead","public","layer", "text!modules/str/Rep
                         if(rs.error.message=="用户未登录"){
                             window.location.href="#Loginphone"
                         }else{
-                            layer.msg(rs.error.message, {time:1000});
+                            layer.msg(rs.error.message, {time:2000});
 
                         }
 

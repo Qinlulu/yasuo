@@ -23,7 +23,7 @@ define(["jquery","pageUrl","PublicHead","check","PublicPassWord",'public',"layer
 
                     api.call(json, api_url).done(function (rs) {
                         if(rs.error){
-                            layer.msg(rs.error.message, {time:1000});
+                            layer.msg(rs.error.message, {time:2000});
                         }else{
                             $(this).addClass("aaaaa")
                             if( $(".huoyan").html()=="重新发送" ||  $(".huoyan").html()=="获取验证码") {
@@ -47,11 +47,10 @@ define(["jquery","pageUrl","PublicHead","check","PublicPassWord",'public',"layer
                     });
                 }
             })
-
             $(".btjsd").on("click",function(){
 
                 if($(".pass").val()=="" || $(".yans").val()=="" ){
-                    layer.msg("请输入信息", {time:1000});
+                    layer.msg("请输入信息", {time:2000});
                     return
                 }
                 var api_url = pageUrl.render()+".xinyongjinku.com/passport/user.php?c=account";
@@ -70,7 +69,7 @@ define(["jquery","pageUrl","PublicHead","check","PublicPassWord",'public',"layer
                     api.call(json, api_url).done(function (rs) {
 
                         if(rs.error){
-                            layer.msg(rs.error.message, {time:1000});
+                            layer.msg(rs.error.message, {time:2000});
                             $(".yans").val("")
                             $(".pass").val("")
                         }else{

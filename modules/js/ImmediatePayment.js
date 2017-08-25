@@ -18,7 +18,7 @@ define ( [ "jquery" ,"pageUrl", "PublicHead" , "public" ,"layer", "text!modules/
                 var json = api.JsonpArr ( r );
                 api.call ( json , api_url ).done ( function ( rs ) {
                     if ( rs.error ) {
-                        layer.msg(rs.error.message, {time:1000});
+                        layer.msg(rs.error.message, {time:2000});
                         $ ( ".donghua" ).hide ()
                     } else {
                         var data = rs.result.data
@@ -93,7 +93,7 @@ define ( [ "jquery" ,"pageUrl", "PublicHead" , "public" ,"layer", "text!modules/
                             var json = api.JsonpArr ( r );
                             api.call ( json , api_url ).done ( function ( rs ) {
                                 if ( rs.error ) {
-                                    layer.msg(rs.error.message, {time:1000});
+                                    layer.msg(rs.error.message, {time:2000});
                                     $ ( ".donghua" ).hide ()
                                 } else {
                                     $ ( ".donghua" ).hide ()
@@ -129,7 +129,7 @@ define ( [ "jquery" ,"pageUrl", "PublicHead" , "public" ,"layer", "text!modules/
                                             console.log(json)
                                             api.call ( json , api_url ).done ( function ( rs ) {
                                                 if ( rs.error ) {
-                                                    layer.msg(rs.error.message, {time:1000});
+                                                    layer.msg(rs.error.message, {time:2000});
                                                     $ ( ".donghua" ).hide ()
                                                 } else {
                                                     $ ( ".donghua" ).hide ()
@@ -181,7 +181,7 @@ define ( [ "jquery" ,"pageUrl", "PublicHead" , "public" ,"layer", "text!modules/
                                                                 console.log(json)
                                                                 api.call(json, api_url).done(function (rs) {
                                                                     if (rs.error) {
-                                                                        layer.msg(rs.error.message, {time:1000});
+                                                                        layer.msg(rs.error.message, {time:2000});
                                                                         clearInterval(time);
                                                                         $(".daoji").html("重新发送")
                                                                         $(".daoji").css("color", "#666")
@@ -217,7 +217,7 @@ define ( [ "jquery" ,"pageUrl", "PublicHead" , "public" ,"layer", "text!modules/
                                                             var json = api.JsonpArr ( r );
                                                             api.call ( json , api_url ).done ( function ( rs ) {
                                                                 if ( rs.error ) {
-                                                                    layer.msg(rs.error.message, {time:1000});
+                                                                    layer.msg(rs.error.message, {time:2000});
 
                                                                     //如果银行卡余额不足强返回
                                                                     /*if(rs.){

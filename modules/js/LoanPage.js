@@ -22,7 +22,7 @@ define(["jquery","pageUrl","PublicHead", "check","public","layer", "text!modules
                 var json = api.JsonpArr(r);
                 api.call(json, api_url).done(function (rs) {
                     if (rs.error) {
-                        layer.msg(rs.error.message, {time:1000});
+                        layer.msg(rs.error.message, {time:2000});
                         $(".donghua").hide()
                     } else {
                         $(".donghua").hide()
@@ -46,7 +46,7 @@ define(["jquery","pageUrl","PublicHead", "check","public","layer", "text!modules
                 var json = api.JsonpArr(r);
                 api.call(json, api_url).done(function (rs) {
                     if (rs.error) {
-                        layer.msg(rs.error.message, {time:1000});
+                        layer.msg(rs.error.message, {time:2000});
                         $(".donghua").hide()
 
                         $(".ullist  li").eq(2).on("click", function () {
@@ -72,7 +72,7 @@ define(["jquery","pageUrl","PublicHead", "check","public","layer", "text!modules
 
             $(".jieba").on("click", function () {
                 if (!sessionStorage.getItem("hao")) {
-                    layer.msg("请绑定银行卡", {time:1000});
+                    layer.msg("请绑定银行卡", {time:2000});
                 } else {
                     $(".donghua").show()
                     var api_url = pageUrl.render()+".xinyongjinku.com/passport/order.php?c=index";
@@ -91,7 +91,7 @@ define(["jquery","pageUrl","PublicHead", "check","public","layer", "text!modules
 
                         api.call(json, api_url).done(function (rs) {
                             if (rs.error) {
-                                layer.msg(rs.error.message, {time:1000});
+                                layer.msg(rs.error.message, {time:2000});
                                 $(".donghua").hide()
                             } else {
                                 var api_url = pageUrl.render()+".xinyongjinku.com/passport/order.php?c=index";
@@ -107,7 +107,7 @@ define(["jquery","pageUrl","PublicHead", "check","public","layer", "text!modules
                                     var json = api.JsonpArr(r);
                                     api.call(json, api_url).done(function (rs) {
                                         if (rs.error) {
-                                            layer.msg(rs.error.message, {time:1000});
+                                            layer.msg(rs.error.message, {time:2000});
                                             $(".donghua").hide()
                                         } else {
                                             $(".donghua").hide()

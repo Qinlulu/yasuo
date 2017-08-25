@@ -13,7 +13,7 @@ define(["jquery","pageUrl", "PublicHead", "check", "public","layer", "text!modul
                 api.call(json, api_url).done(function (rs) {
                     if (rs.error) {
                         $(".donghua").hide()
-                        layer.msg(rs.error.message, {time:1000});
+                        layer.msg(rs.error.message, {time:2000});
                     } else {
                         $(".yanshouji").html(rs.result.data.phone)
                     }
@@ -35,7 +35,7 @@ define(["jquery","pageUrl", "PublicHead", "check", "public","layer", "text!modul
                 $(".donghua").show()
                 var api_url = pageUrl.render()+".xinyongjinku.com/passport/user.php?c=account";
                 if ($(".yanmi").val() == "") {
-                    layer.msg("请填写运营商密码", {time:1000});
+                    layer.msg("请填写运营商密码", {time:2000});
                     $(".donghua").hide()
                     return
                 }
@@ -57,16 +57,16 @@ define(["jquery","pageUrl", "PublicHead", "check", "public","layer", "text!modul
                     api.call(json, api_url).done(function (rs) {
                         if (rs.error) {
                             $(".donghua").hide()
-                            layer.msg(rs.error.message, {time:1000});
+                            layer.msg(rs.error.message, {time:2000});
                             if (rs.error.message == "授信失败") {
-                                layer.msg("授信失败 7天后重试", {time:1000});
+                                layer.msg("授信失败 7天后重试", {time:2000});
                                 window.location.href = "#FailAudit"
                             }
                         } else {
                             console.log(rs)
                             if (rs.result.data.code) {
                                 $(".donghua").hide()
-                                layer.msg(rs.result.data.message, {time:1000});
+                                layer.msg(rs.result.data.message, {time:2000});
                                 $(".renzhengshouji .tijiao").css("display", "none")
                                 sessionStorage.setItem("ids", rs.result.data.task_id)
                                 $(".tankuang").show()
@@ -117,13 +117,13 @@ define(["jquery","pageUrl", "PublicHead", "check", "public","layer", "text!modul
                                             api.call(json, api_url).done(function (rs) {
                                                 if (rs.error) {
                                                     $(".donghua").hide()
-                                                    layer.msg(rs.error.message, {time:1000});
+                                                    layer.msg(rs.error.message, {time:2000});
                                                     clearInterval(time);
                                                     $(".daoji").html("重新发送")
                                                     $(".daoji").css("color", "#666")
                                                 } else {
                                                     $(".donghua").hide()
-                                                    layer.msg(rs.result.data.message, {time:1000});
+                                                    layer.msg(rs.result.data.message, {time:2000});
                                                 }
                                             })
                                         }
@@ -134,7 +134,7 @@ define(["jquery","pageUrl", "PublicHead", "check", "public","layer", "text!modul
 
                                 $(".tijiaos").on("click", function () {
                                     if ($(".yans").val() == " ") {
-                                        layer.msg("请填写验证码", {time:1000});
+                                        layer.msg("请填写验证码", {time:2000});
                                         return
                                     } else {
                                         $(".donghua").show()
@@ -161,17 +161,17 @@ define(["jquery","pageUrl", "PublicHead", "check", "public","layer", "text!modul
                                                 if (rs.error) {
                                                     $(".donghua").hide()
                                                     if (rs.error.code == "1812") {
-                                                        layer.msg(rs.error.message, {time:1000});
+                                                        layer.msg(rs.error.message, {time:2000});
                                                         $(".tankuang").hide()
                                                     } else {
-                                                        layer.msg(rs.error.message, {time:1000});
+                                                        layer.msg(rs.error.message, {time:2000});
                                                     }
 
                                                 } else {
                                                     $(".donghua").hide()
                                                     $(".tankuang").hide()
                                                     if (rs.result.data.code) {
-                                                        layer.msg(rs.result.data.message, {time:1000});
+                                                        layer.msg(rs.result.data.message, {time:2000});
                                                         $(".tankuang").show()
                                                         $(".yans").val(" ")
                                                     } else {

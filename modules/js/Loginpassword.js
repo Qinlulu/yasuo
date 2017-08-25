@@ -13,7 +13,7 @@ define(["jquery", "pageUrl", "PublicHead", "PublicPassWord", "public","layer", "
             $(".btjsd").on("click", function () {
                 var api_url = pageUrl.render() + ".xinyongjinku.com/passport/user.php?c=account";
                 if ($(".pass").val() == "" && $(".text").val() == "") {
-                    layer.msg("请输入密码", {time:1000});
+                    layer.msg("请输入密码", {time:2000});
                     return
                 }
                 getSwiperData()
@@ -28,7 +28,7 @@ define(["jquery", "pageUrl", "PublicHead", "PublicPassWord", "public","layer", "
                     var json = api.JsonpArr(r);
                     api.call(json, api_url).done(function (rs) {
                         if (rs.error) {
-                            layer.msg(rs.error.message, {time:1000});
+                            layer.msg(rs.error.message, {time:2000});
                         } else {
                             window.location.href = "#HomePage"; //jiekuanzhu
                             localStorage.setItem("phone", $(".tit").html());

@@ -11,7 +11,7 @@ define(["jquery","pageUrl", "PublicHead", "public","layer","JqueryQrcode", "qrco
                 var json = api.JsonpArr(r);
                 api.call(json, api_url).done(function(rs) {
                     if(rs.error) {
-                        layer.msg(rs.error.message, {time:1000});
+                        layer.msg(rs.error.message, {time:2000});
                     } else {
                         var data = rs.result.data;
                         $(".donghua").hide()
@@ -26,7 +26,7 @@ define(["jquery","pageUrl", "PublicHead", "public","layer","JqueryQrcode", "qrco
                             var json = api.JsonpArr(r);
                             api.call(json,api_url).done(function(rs){
                                 if(rs.error){
-                                    layer.msg(rs.error.message, {time:1000});
+                                    layer.msg(rs.error.message, {time:2000});
                                 }else{
                                     $(".donghua").hide()
                                     var data2 = rs.result.data;

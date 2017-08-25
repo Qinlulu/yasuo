@@ -10,7 +10,7 @@ define(["jquery","pageUrl", "PublicHead","public","layer", "text!modules/str/Add
                 if(A ==""){
 
                 }else if (!reg.test(A)) {
-                    layer.msg('请输入正确手机号码', {time:1000});
+                    layer.msg('请输入正确手机号码', {time:2000});
                     return
                 }
 
@@ -23,7 +23,7 @@ define(["jquery","pageUrl", "PublicHead","public","layer", "text!modules/str/Add
                     if(A==""){
 
                     }else if (!reg.test(A)) {
-                        layer.msg('请输入正确银行卡', {time:1000});
+                        layer.msg('请输入正确银行卡', {time:2000});
 
                         return
                     } else {
@@ -38,7 +38,7 @@ define(["jquery","pageUrl", "PublicHead","public","layer", "text!modules/str/Add
                             var json = api.JsonpArr(r);
                             api.call(json, api_url).done(function (rs) {
                                 if (rs.error) {
-                                    layer.msg(rs.error.message, {time:1000});
+                                    layer.msg(rs.error.message, {time:2000});
 
                                 } else {
                                     var yinhangka = {
@@ -83,14 +83,14 @@ define(["jquery","pageUrl", "PublicHead","public","layer", "text!modules/str/Add
                 getSwiperData()
                 function getSwiperData() {
                     if ($("#yph").val() == "") {
-                        layer.msg('请输入预留手机号码', {time:1000});
+                        layer.msg('请输入预留手机号码', {time:2000});
                         $(".donghua").hide()
                         return
                     }
                     var yonghu = JSON.parse(sessionStorage.getItem("yonghus"))
                     var yinhangkass = JSON.parse(sessionStorage.getItem("yinhangkas"))
                     if (!yinhangkass) {
-                        layer.msg('确认银行卡信息', {time:1000});
+                        layer.msg('确认银行卡信息', {time:2000});
                         $(".donghua").hide()
                         return
                     }
@@ -107,7 +107,7 @@ define(["jquery","pageUrl", "PublicHead","public","layer", "text!modules/str/Add
 
                     api.call(json, api_url).done(function (rs) {
                         if (rs.error) {
-                            layer.msg(rs.error.message, {time:1000});
+                            layer.msg(rs.error.message, {time:2000});
                             console.log(rs)
                             $(".donghua").hide()
                         } else {
@@ -136,15 +136,15 @@ define(["jquery","pageUrl", "PublicHead","public","layer", "text!modules/str/Add
             $(".jiaka").on("click", function () {
 
                 if (!$(".aaaaa")) {
-                    layer.msg('请获取验证码', {time:1000});
+                    layer.msg('请获取验证码', {time:2000});
                     return
                 }
                 if ($("#kahao").val() == "") {
-                    layer.msg('请输入银行卡号码', {time:1000});
+                    layer.msg('请输入银行卡号码', {time:2000});
                     return
                 }
                 if ($(".yanzhengs").val() == "") {
-                    layer.msg('请输入预留手机号码验证码', {time:1000});
+                    layer.msg('请输入预留手机号码验证码', {time:2000});
                     return
                 }
                 var api_url = pageUrl.render()+".xinyongjinku.com/passport/bank.php?c=account";
@@ -161,7 +161,7 @@ define(["jquery","pageUrl", "PublicHead","public","layer", "text!modules/str/Add
 
                     api.call(json, api_url).done(function (rs) {
                         if (rs.error) {
-                            layer.msg(rs.error.message, {time:1000});
+                            layer.msg(rs.error.message, {time:2000});
                         } else {
                             window.location.href="#HomePage"
                         }
