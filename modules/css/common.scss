@@ -1,0 +1,305 @@
+body, html,.main{
+    width: 100%;
+    height: 100%;
+    background: #F6F6F6;
+}
+.main{
+  .head {
+    width: 100%;
+    height: 3.0625rem;
+    background: linear-gradient(34deg, #9B764C 0, #E3B764 100%);
+    border: 1px solid transparent;
+    box-sizing: border-box;
+    .header {
+      display: flex;
+      width: 100%;
+      height: 3.0625rem;
+      line-height: 3.0625rem;
+      a {
+        color: #fff
+      }
+      span {
+        flex: 1;
+        text-align: center;
+        font-size: 1.0625rem;
+        letter-spacing: 0.088125rem;
+        color: #fff;
+        &:nth-child(1) {
+          img{
+            width: 1.5rem;
+            height: 1.5rem;
+            margin-top: 0.9rem;
+          }
+        }
+        &:nth-child(2) {
+          flex: 5;
+        }
+        &:nth-child(3) {
+          font-size: 0.875rem
+        }
+      }
+    }
+  }
+  .nav{
+    width:100%;
+    height: 6.25rem;
+    img {
+      width: 100%
+    }
+  }
+  .tem{
+    width:100%;
+    height:auto;
+    background: #F6F6F6;
+    padding:0.6rem 0 4rem 0;
+    p {
+      margin-top: 0.5rem;
+      line-height: 0.75rem;
+      text-indent: 1.125rem;
+      font-size: 0.75rem;
+      color: #CC9F68;
+    }
+  }
+  button {
+    width: 17.5rem;
+    padding:0.6rem 0 1.6rem 0;
+    text-align: center;
+    border: none;
+    outline: 0;
+    background: url("https://imagecdn.xinyongjinku.com/wechat/modules/images/jiekuan_button@v1.1.1.png") center no-repeat;
+    background-size: cover;
+    display: block;
+    font-size: 1.125rem;
+    color: #fff;
+    box-sizing: border-box;
+    margin:1rem auto;
+    a {
+      width: 100%;
+      height: 100%;
+      display: inline-block;
+      color: #FFF;
+      font-size: 1.125rem;
+    }
+
+  }
+  .button {
+    width: 100%;
+    margin-top: 1.25rem;
+    border: 0.01px solid transparent;
+    box-sizing: border-box
+  }
+  ::-webkit-input-placeholder {
+    font-size: 0.75rem;
+    color: #D8D8D8;
+   }
+  .xieyis, .zhucexieyi {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #fff
+  }
+  .inp {
+    width: 100%;
+    height: 3.125rem;
+    div {
+      width: 75%;
+      height: 3.125rem;
+      border-bottom: 0.1rem solid rgba(216,216,216,0.78);
+      margin: 0 auto;
+      input {
+        border: none;
+        width: 76%;
+        background: 0 0;
+        height: 54%;
+        font-size: 0.75rem;
+        text-indent: 0.25rem;
+        line-height: 1.125rem;
+        outline: 0 ;
+        margin-top:1rem;
+      }
+      span {
+        width: 1.8125rem;
+        height: 1.75rem;
+        img {
+          width: 1.8125rem;
+          height: 1.75rem;
+          margin-bottom: -0.625rem
+        }
+      }
+    }
+  }
+  h1 {
+    text-align: center;
+    height: 3.125rem;
+    line-height: 2.5rem;
+    em {
+    display: inline-block;
+    width: 0.75rem;
+    height: 0.75rem;
+    background: url(https://imagecdn.xinyongjinku.com/wechat/modules/images/dan.png) center no-repeat;
+    background-size: cover;
+    margin: 0 0.3125rem -0.0625rem 0;
+  }
+  }
+  .check {
+    em {
+      background: url(https://imagecdn.xinyongjinku.com/wechat/modules/images/danz.png) center no-repeat;
+      background-size: cover
+    }
+    i {
+      color: #00f
+    }
+  }
+  .PublicImgCss{
+    width:100%;
+    .img {
+      width: 100%;
+      background: #fff;
+      img {
+        width: 100%;
+        display: block;
+        margin: 0 auto
+      }
+    }
+    .button {
+      width: 100%;
+      height: auto;
+      margin-top: 1.5rem;
+    }
+  }
+  .noImg {
+    img{
+      width:100%;
+    }
+    p{
+      width:100%;
+      background: #fff;
+      line-height: 2.5rem;
+      text-align: center;
+      font-size: 0.75rem;
+      margin-top:-0.1rem;
+      color: #CC9F68;
+    }
+  }
+}
+
+.donghua{
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  bottom: 0;
+  left:0;
+  z-index: 110;
+  display: none;
+  position: fixed;
+  .loading{
+    width:3.75rem;
+    height:3.75rem;
+    position:absolute;
+    left:50%;
+    top:50%;
+    margin: -1.25rem;
+    animation: mymove 1s cubic-bezier(0.96, 0.96, 0.04, 0.04) infinite;
+    @for $i from 0 to 8{
+      .i#{$i}{
+        width:0.875rem;
+        height:0.875rem;
+        border-radius: 100%;;
+        position:absolute;
+        left:0;
+        top:0;
+        transform: rotate($i*45deg) ;
+        transform-origin: 1.875rem 1.875rem;
+      }
+      .s#{$i}{
+        width:0.875rem;
+        height:0.875rem;
+        border-radius: 100%;;
+        position:absolute;
+        left:50%;
+        top:50%;
+        background-image: linear-gradient(34deg, #9B764C 0, #E3B764 100%);
+        margin: -0.4375rem;
+        transform:scale(0.15*$i)
+      }
+
+    }
+  }
+  .tishi {
+    text-align: center;
+    width:8.75rem;
+    line-height: 9.375rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -3.625rem;
+    font-size: 0.875rem;
+    color: rgba(216, 161, 94,0.66)
+  }
+
+  @keyframes mymove
+  {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+  }
+}
+
+
+.zhezhao{
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    bottom:0;
+    left:0;
+    .pop {
+      width: 100%;
+      height: 13rem;
+      background: #fff;
+      position: absolute;
+      left: 0;
+      bottom: 3.2rem;
+      .popslid{
+        width: 100%;
+        height: 10rem;
+        overflow: scroll;
+        li{
+          width: 100%;
+          line-height: 2.75rem;
+          text-align: center;
+          height: 2.75rem;
+          box-shadow: -0.0625rem -0.0625rem 0.1875rem #eee;
+        }
+        .ost {
+          background: rgba(93, 108, 142, 0.35);
+          color: #fff
+        }
+      }
+      .tittle{
+        width: 100%;
+        line-height: 2.75rem;
+        text-align: center;
+        height: 2.75rem;
+        display: flex;
+        font-size: 0.875rem;
+        background: rgba(238, 238, 238, 0.21);
+        span {
+          flex: 1;
+          &:nth-child(2) {
+            flex: 4;
+          }
+        }
+      }
+    }
+  }
+#YSF-BTN-HOLDER{
+  display: none !important;
+}
+.layer-3{
+  display: none !important;
+}
+
+
+
