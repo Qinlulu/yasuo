@@ -5,18 +5,6 @@
   flex-direction: column;
   position: relative;
 }
-.BorrowRecord .noImg img {
-  width: 100%;
-}
-.BorrowRecord .noImg p {
-  width: 100%;
-  background: #fff;
-  line-height: 2.5rem;
-  text-align: center;
-  font-size: 0.75rem;
-  margin-top: -0.1rem;
-  color: #CC9F68;
-}
 .BorrowRecord .conts .ulsi {
   width: 100%;
   height: auto;

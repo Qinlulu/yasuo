@@ -154,7 +154,6 @@ html,
 }
 .main .PublicImgCss .img {
   width: 100%;
-  height: 11.25rem;
   background: #fff;
 }
 .main .PublicImgCss .img img {
@@ -166,6 +165,18 @@ html,
   width: 100%;
   height: auto;
   margin-top: 20px;
+}
+.main .noImg img {
+  width: 100%;
+}
+.main .noImg p {
+  width: 100%;
+  background: #fff;
+  line-height: 2.5rem;
+  text-align: center;
+  font-size: 0.75rem;
+  margin-top: -0.1rem;
+  color: #CC9F68;
 }
 .donghua {
   width: 100%;
