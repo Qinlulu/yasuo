@@ -1,7 +1,7 @@
 define(["backbone","require"],function(){
     var Router = Backbone.Router.extend({
         routes: {
-            "yindao":"guidance",
+            "guidance":"guidance",
             "Loginphone":"Loginphone",
             "LoginPassword":"LoginPassword",
             "RegistrationPage":"RegistrationPage",

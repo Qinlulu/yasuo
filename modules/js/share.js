@@ -27,17 +27,20 @@ define(["jquery","pageUrl", "PublicHead", "public","layer","JqueryQrcode", "qrco
                             api.call(json,api_url).done(function(rs){
                                 if(rs.error){
                                     layer.msg(rs.error.message, {time:2000});
-                                }else{
                                     $(".donghua").hide()
+                                }else{
                                     var data2 = rs.result.data;
-
-                                    var url = pageUrl.render()+".xinyongjinku.com/app/share/landing.html?channe=157&username=" + data.user_name + "&phone=" + data.phone+"&userid="+data2.id+"&Route=code";
-
-                                    $('.erweima').qrcode({
-                                        text: url, //二维码代表的字符串（本页面的URL）
-                                        width: 155, //二维码宽度
-                                        height: 155 //二维码高度
-                                    });
+                                    if(data2.id){
+                                        $(".donghua").hide()
+                                        var url = pageUrl.render()+".xinyongjinku.com/app/share/landing.html?channe=157&username=" + data.user_name + "&phone=" + data.phone+"&userid="+data2.id+"&Route=code";
+                                        $('.erweima').qrcode({
+                                            text: url, //二维码代表的字符串（本页面的URL）
+                                            width: 155, //二维码宽度
+                                            height: 155 //二维码高度
+                                        });
+                                    }else{
+                                        getSwiperDatauus();
+                                    }
                                 }
                             })
 
