@@ -1,0 +1,98 @@
+.yinhangkajia .tittle {
+    width: 100%;
+    height: 2rem;
+    ;
+    line-height: 2rem;
+    font-size: 0.75rem;
+    color: #5C5C5C;
+    text-align: center
+}
+
+.yinhangkajia .conts {
+    width: 100%;
+    height: auto;
+    margin-top: 0
+;}
+
+.yinhangkajia .conts ul {
+    width: 100%
+}
+
+.yinhangkajia .conts ul li {
+    background: #FFF;
+    box-shadow: 0 -0.0625rem 0 0 #EDEDED, 0 0.0625rem 0 0 #EDEDED;
+    height: 2.5625rem;
+    line-height: 2.5625rem;
+    display: flex;
+    font-size: 0.75rem
+}
+
+.yinhangkajia .conts ul li span {
+    width: 6.875rem;
+    height: 2.5625rem;
+    text-indent: 0.875rem
+}
+
+.yinhangkajia .conts ul li input {
+    width: 10.9375rem;
+    height: 100%;
+    border: none;
+    outline: 0;
+    display: inline-block
+}
+
+.yinhangkajia .conts ul li i {
+    color: #CC9F68
+;}
+
+.yinhangkajia .conts ul li .huoyan {
+    width: 6.375rem;
+    color: #CC9F68;
+    display: inline-block;
+    background: 0 0;
+    border: none;
+    outline: 0;
+    text-align: center;
+    font-size: 0.75rem;
+    ;
+    margin: 0
+;}
+
+.yinhangkajia .zhichikas {
+    text-align: center;
+    line-height: 2.5rem;
+    color: rgba(0, 0, 235, 0.6)
+}
+.yinhangkajia h1{
+	margin-left: 1rem;
+}
+
+/*添加银行卡警告提示*/
+.yinhangkajia .mBox{
+        display: none;
+	    position: fixed;
+	    left: 0;
+	    top: 0;
+	    zoom: 1;
+	    background: #2f2e2e;
+	    z-index: 999;
+	    width:100%;
+	    height:100%;
+	    filter:alpha(opacity=50); /*IE滤镜，透明度50%*/
+	    -moz-opacity:0.5; /*Firefox私有，透明度50%*/
+	    opacity:0.5;/*其他，透明度50%*/
+
+}
+
+.yinhangkajia .xbox {
+        display:none;
+	    padding: 3px;
+	    text-align: left;
+	    width: 280px;    
+	    background: #fff;
+	    position: absolute;
+	    top: 40%;
+	    left: 10%;
+	    z-index: 999999;
+	    border-radius:10px;
+}

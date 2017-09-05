@@ -1,0 +1,172 @@
+.renzhengshiming{
+    width: 100%;
+    padding-bottom: 2rem;
+}
+
+.renzhengshiming .shenfen {
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    background: #FFF;
+    border: 1px solid transparent;
+    padding: 0.625rem 1.125rem;
+    
+}
+.renzhengshiming .shenfen dl {
+    width: 100%;
+    height: 4.375rem;
+    padding: 0.625rem 0 0.875rem;
+    display: flex
+}
+
+.renzhengshiming .shenfen dl dt {
+    width: 5.3125rem;
+    height: 100%;
+    padding-top: 0.375rem;
+}
+
+.renzhengshiming .shenfen dl dt p {
+    font-size: 0.875rem;
+    color: #5C5C5C;
+    line-height: 0.875rem
+}
+
+.renzhengshiming .shenfen dl dt span {
+    font-size: 0.75rem;
+    color: #989898;
+    line-height: 1.25rem
+}
+
+.renzhengshiming .shenfen dl dd {
+    width: 16.25rem;
+    height: 100%;
+    border-radius: 5px;
+    position: relative;
+    z-index: 2;
+}
+
+.renzhengshiming .shenfen dl dd img {
+    display: block;
+    margin: 0 auto;
+    width: 16.25rem;
+    height: 100%;
+    border-radius: 5px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 20;
+    pointer-events: none
+}
+
+.renzhengshiming .shenfen dl dd .right-img1, .renzhengshiming .shenfen dl dd .right-img2, .renzhengshiming .shenfen dl dd .right-img3 {
+    position: absolute;
+    top: 12%;
+    left: 41%;
+    height: 73%;
+    width: 20%;
+    opacity: 0.97;
+    display: none
+}
+
+.renzhengshiming .shenfen dl dd .dianji {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 5;
+}
+
+.renzhengshiming .shenfen dl dd .dianji input {
+    outline: 0;
+    border: none
+}
+
+.renzhengshiming .shenfen dl dd .dianji #myForm, .renzhengshiming .shenfen dl dd .dianji #myForm1, .renzhengshiming .shenfen dl dd .dianji #myForm2 {
+    width: 100%;
+    height: 100%;
+    display: block;
+    padding-left: 0.125rem;
+    padding-top: 0.0625rem
+}
+
+.renzhengshiming .shenfen dl dd .dianji .file1, .renzhengshiming .shenfen dl dd .dianji .file2, .renzhengshiming .shenfen dl dd .dianji .file3 {
+    width: 100%;
+    height: 100%;
+    display: block
+}
+
+.renzhengshiming .shenfen dl dd .dianji .text1, .renzhengshiming .shenfen dl dd .dianji .text2, .renzhengshiming .shenfen dl dd .dianji .text3 {
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: none
+}
+
+.renzhengshiming .shenfen .p {
+    width: 100%;
+    height: 5.125rem
+}
+
+.renzhengshiming .shenfen .p p {
+    height: 2.5rem;
+    line-height: 2.5rem;
+    display: flex;
+    box-shadow: 0 -0.03125rem 0 0 #EDEDED, 0 0.03125rem 0 0 #EDEDED
+}
+
+.renzhengshiming .shenfen .p p span {
+    width: 5.3125rem;
+    height: 100%;
+    color: #5C5C5C;
+    font-size: 0.75rem
+}
+
+.renzhengshiming .shenfen .p p input {
+    width: 16.25rem;
+    height: 95%;
+    background: 0 0;
+    display: block;
+    text-indent: 0.25rem;
+    line-height: 2.5rem;
+    border: none;
+    outline: 0
+;}
+.renzhengshiming .doubleCheck{
+	font-size: 0.75rem;
+	color: #CC9F68;
+	border-bottom: 1px solid #eee;
+	height: 1.3rem;
+}
+
+/*弹框样式*/
+.renzhengshiming .mBox{
+	    display: none;
+	    position: fixed;
+	    left: 0;
+	    top: 0;
+	    zoom: 1;
+	    background: #2f2e2e;
+	    z-index: 999;
+	    width:100%;
+	    height:100%;
+	    filter:alpha(opacity=50); /*IE滤镜，透明度50%*/
+	    -moz-opacity:0.5; /*Firefox私有，透明度50%*/
+	    opacity:0.5;/*其他，透明度50%*/
+	}
+.renzhengshiming .mBox .xBox {
+	    display:none;
+	     padding: 3px;
+	    text-align: left;
+	    width: 280px;
+	    height: auto;	    
+	    background: #fff;
+	    overflow: auto;
+	    position: absolute;
+	    top: 40%;
+	    left: 10%;
+	    z-index: 999999;
+	    border-radius:10px;
+	}

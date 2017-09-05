@@ -1,0 +1,14 @@
+
+.gengduo,#Advertisement, .gengduo div img {
+    width: 100%
+}
+.gengduo,#Advertisement{
+    height: 100%
+}
+.gengduo {
+    background: #FEFBEC;
+}
+#Advertisement{
+    height: 100%;
+   background: #FFD630;
+}

@@ -1,0 +1,47 @@
+.zhucezhang .contss {
+    width: 100%;
+    height: auto;
+    border-top: 0.0625rem solid transparent
+}
+.zhucezhang .contss .imgd {
+    width: 6rem;
+    height: 6rem;
+    margin: 6rem auto 0;
+    background: #D8D8D8;
+    border-radius: 0.625rem
+}
+.zhucezhang .contss .imgd img {
+    display: block;
+    width: 100%;
+    border-radius: 0.625rem
+}
+.zhucezhang .inp{
+    margin-top:1.35rem;
+}
+
+.zhucezhang .button .dengbtn {
+    background: #b4b4b4 !important;
+    color: #fff !important;
+    padding:0;
+    height:2.8rem;
+}
+.zhucezhang .button .dengbtns {
+    background: url("https://imagecdn.xinyongjinku.com/wechat/modules/images/button@v1.1.0.png") center no-repeat !important;
+    background-size: cover !important;
+}
+
+.zhucezhang .tip{
+	height: 0.3rem;
+    line-height: 0.3rem;
+    text-align: center;
+    color: #D3D3D3;
+}
+.zhucezhang .tip_1{
+	height: 0.3rem;
+    line-height: 0.3rem;
+    position: fixed;
+    bottom: 3%;
+    left: 50%;
+    transform: translate3d(-50%,0,0);
+    color: #d3af6f;
+}

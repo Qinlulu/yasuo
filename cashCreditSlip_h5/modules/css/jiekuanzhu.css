@@ -1,0 +1,78 @@
+.jiekuanzhu{
+    margin-top:-3.0625rem;
+}
+.jiekuanzhu .mainhead .header {
+    display: flex;
+    width: 100%;
+    height: 3.0625rem;
+    line-height: 3.0625rem;
+}
+
+.jiekuanzhu .mainhead .header span {
+    flex: 1;
+    text-align: center;
+    font-size: 1.0625rem;
+    letter-spacing: 0.088125rem;
+    color: #fff
+}
+.jiekuanzhu .mainhead .header span:nth-child(2){
+    flex:3;
+}
+.jiekuanzhu .header span:nth-child(3) img{
+    width: 1.7rem;
+    height: 1.2rem;
+    margin: -4px auto;
+}
+
+.jiekuanzhu .mainhead .ka .renzheng {
+    border: 2px solid #FFF;
+    background: rgba(255, 255, 255, .02);
+    color: #FFF
+}
+
+.jiekuanzhu .mainhead .ka .renzheng i img {
+    width: 0.9375rem;
+    height: 0.6875rem;
+    display: inline-block;
+    margin-left: -0.25rem
+}
+
+.jiekuanzhu .content {
+    width: 85%
+}
+
+.jiekuanzhu .div {
+    display: none
+}
+
+.jiekuanzhu .uls {
+    width: 100%;
+    height: 1.25rem;
+    line-height: 1.25rem;
+    display: flex;
+    text-align: center;
+    font-size: 1rem
+}
+
+.jiekuanzhu .uls li {
+    flex: 1;
+    display: flex
+}
+.jiekuanzhu .uls li:nth-child(1){
+	border-right: 1px solid #DDD;
+    padding-right: 0.5rem;
+    margin-right: 0.3rem;
+}
+
+.jiekuanzhu .uls li span {
+    flex: 1
+;}
+
+.jiekuanzhu .uls li span:nth-child(1) {
+    color: #B3B3B3
+;}
+
+.jiekuanzhu .uls li span i {
+    color: #CC9F68;
+}
+

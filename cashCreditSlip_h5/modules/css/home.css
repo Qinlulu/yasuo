@@ -1,0 +1,230 @@
+.jiekuan .mainhead, .jiekuan .mainhead .ka {
+    position: relative;
+    padding-top: 0.0625rem
+}
+.jiekuan {
+    width: 100%;
+    height: auto;
+    background: #fff;
+    padding-bottom:4rem;
+}
+.jiekuan .mainhead {
+    width: 100%;
+    height: 14.625rem;
+    background-image: linear-gradient( #6A737C 0, #43494F 100%)
+}
+.jiekuan .mainhead .header {
+    height: 3.5rem;
+    line-height:3.5rem;
+}
+.jiekuan .mainhead .ka {
+    width: 95%;
+    height: 15rem;
+    background: url(https://imagecdn.xinyongjinku.com/wechat/modules/images/jieweizhu.png) center no-repeat;
+    background-size: cover;
+    border-radius: 0.5rem;
+    color: #fff;
+    margin: 0 auto;
+    border-top: 0.0625rem solid #eee
+}
+.jiekuan .mainhead .ka .renzheng {
+    border-radius: 0.625rem;
+    width: 5rem;
+    height: 1.25rem;
+    position: absolute;
+    border: 1px solid #989898;
+    font-size: 0.75rem;
+    color: #989898;
+    ;
+    line-height: 1.25rem;
+    text-align: center;
+    top: 1.25rem;
+    right: 1.0625rem;
+}
+.jiekuan .mainhead .ka .renzheng i img {
+    width: 0.625rem;
+    height: 0.625rem;
+    margin-bottom: 0.0625rem;
+    color: #D8D8D8
+}
+.jiekuan .mainhead .ka .ulsw, .jiekuan .mainhead .ka .ulsw li .t, .jiekuan .mainhead .ka ol .jie {
+    color: #FFF;
+    text-shadow: 0 0.0625rem 0.0625rem rgba(0, 0, 0, .27)
+}
+.jiekuan .mainhead .ka .ulsw {
+    width: 93%;
+    height: 3.125rem;
+    display: flex;
+    margin: 6.875rem auto 0;
+    font-size: 0.875rem;
+    text-align: left
+}
+.jiekuan .mainhead .ka .ulsw li {
+    flex: 1;
+    justify-content: space-between
+}
+.jiekuan .mainhead .ka .ulsw li p {
+    margin-bottom: 0.5625rem;
+}
+.jiekuan .mainhead .ka .ulsw li .t {
+    font-size: 1.75rem;
+    line-height: 1.75rem
+}
+.jiekuan .mainhead .ka .ulsw li .t i {
+    font-size: 1.125rem;
+    line-height: 1.125rem
+}
+.jiekuan .mainhead .ka ol {
+    display: flex;
+    width: 93%;
+    height: 2.9375rem;
+    line-height: 2.9375rem;
+    margin: 0 auto;
+    font-size: 0.75rem
+}
+.jiekuan .mainhead .ka ol li {
+    justify-content: space-between;
+    text-align: left;
+    flex: 1
+}
+.jiekuan .mainhead .ka ol li:nth-child(1) {
+    flex: 2
+}
+.jiekuan .mainhead .ka ol .jie {
+    opacity: .5
+}
+.jiekuan .kong {
+    width: 100%;
+    height: 4.375rem
+}
+.jiekuan .content {
+    width: 80%;
+    margin: 0 auto
+}
+.jiekuan .content .conts {
+    width: 100%;
+    height: auto;
+    margin-top:3rem;
+}
+.jiekuan .content .conts .change {
+    width: 100%;
+    height: 1.25rem;
+    position: relative
+}
+.jiekuan .content .conts .change .jindutiao {
+    width: 100%;
+    height: 0.375rem;
+    background: #D8D8D8;
+    box-shadow: inset 0 0.0625rem 0.0625rem 0 rgba(0, 0, 0, .1);
+    border-radius: 0.625rem;
+    margin-top: 1.5rem
+}
+.jiekuan .content .conts .change .jindutiao .jindutiaos, .jiekuan .content .conts .change .jindutiao .jindutiaoss {
+    position: absolute;
+    width: 100%;
+    height: 0.375rem;
+    background: #CC9F68;
+    box-shadow: inset 0 0.0625rem 0.0625rem 0 rgba(0, 0, 0, .1);
+    border-radius: 0.625rem
+}
+.jiekuan .content .conts .change .jindutiao .huakuai, .jiekuan .content .conts .change .jindutiao .huakuais {
+    background: url(https://imagecdn.xinyongjinku.com/wechat/modules/images/slide.png) center no-repeat;
+    background-size: cover;
+    width: 1.75rem;
+    height: 1.75rem;
+    position: absolute;
+    left: 93%;
+    top: -0.6875rem;
+    cursor: pointer
+}
+.jiekuan .content .conts .change .jindutiao .xian, .jiekuan .content .conts .change .jindutiao .xians {
+    background: 0 0;
+    background-size: cover;
+    width: 3.5rem;
+    height: 0.875rem;
+    position: absolute;
+    left: 87%;
+    top: -2rem;
+    color: #CC9F68;
+    font-size: 0.75rem;
+    text-align: center
+}
+.jiekuan .content .conts .change .jindutiao .xians {
+    width: 3.25rem;
+    text-align: center;
+}
+.jiekuan .content .conts .ds {
+    width: 103%;
+    height: 0.9375rem;
+    line-height:0.9375rem;
+    display: flex;
+    font-size: 0.875rem;
+    color: #B3B3B3;
+    text-align: center
+}
+.jiekuan .content .conts .ds span {
+    justify-content: space-between;
+    flex: 6;
+}
+.jiekuan .content .conts .ds span:nth-child(2) {
+    flex: 17
+}
+.jiekuan .content .conts .dss {
+    display: flex;
+    width: 100%;
+}
+.jiekuan .content .conts .dss span:nth-child(2) {
+    flex: 29
+}
+
+.jiekuan .content button {
+    margin: 3.25rem auto 0;
+}
+.jiekuan .content button a {
+    font-size: 1.125rem;
+    color: #FFF
+}
+
+
+.renzhengs{
+    width:100%;
+    height:100%;
+    background: rgba(0,0,0,0.5);
+    position: fixed;
+    left:0;
+    bottom:0;
+    z-index: 99;
+    display: none;
+}
+.renzhengs .renzhengsCon{
+    width:60%;
+    height:auto;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%,-50%,0);
+    background: #fff;
+    padding:0.75rem;
+    border-radius:16px;
+}
+
+.renzhengs .renzhengsCon .tittles{
+    height:3rem;
+    line-height: 3rem;
+    text-align: center;
+    font-size: 0.75rem;
+}
+.renzhengs .renzhengsCon .lists{
+    width:90%;
+    height:2rem;
+    line-height: 2.3rem;
+    margin:0 auto;
+    border-top:1px solid #e0e0e0;
+    text-align: center;
+    display: flex;
+    font-size: 0.75rem;
+}
+.renzhengs .renzhengsCon .lists span{
+    flex:1;
+}
+
