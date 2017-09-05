@@ -1,0 +1,145 @@
+html,body .luodiye {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: radial-gradient(50% 98%, #FFD991 2%, #F4D98E 52%, #E7C972 98%);
+    }
+.luodiye .banner {
+    width: 100%;
+   }
+.luodiye .banner .img {
+    width: 100%;
+    display: inline-block; }
+.luodiye .center{
+    width: 100%;
+    padding-bottom: 8%;
+    background-size: cover;
+    margin: -6px auto;
+}
+.luodiye .form {
+    width: 16rem;
+    margin: 20px 0 0 24px;
+    }
+.luodiye .form p {
+	text-align:center;
+    background: #FFFFFF;
+    border: 1px solid #CC9F68;
+    margin-bottom: 0.7rem;
+    height: 2.5rem;
+    width: 100%;
+    display: flex;
+    border-radius: 100px; 
+    }
+.luodiye .form p span {
+    width: 1.45rem;
+    height: 1.4rem;
+    color: #D8AA5A;
+    margin: 0.45rem 0.5rem;
+    display: block; }
+.luodiye .form p span img {
+    width: 1.45rem;
+    height: 1.4rem; }
+.luodiye .form p input {
+    width: 8.7rem;
+    background: transparent;
+    line-height: 1.5rem;
+    font-size: 0.8rem;
+    outline: none;
+    border: none;
+    height: 1.5rem;
+    color: #999;
+    margin-top: 0.5rem; }
+.luodiye .form p .huoyan {
+    width: 4.5rem;
+    height: 2.5rem;
+    font-size: 0.7rem;
+    color: #D8AA5A;
+    letter-spacing: 0;
+    background: transparent;
+    border: none;
+    outline: none;
+    text-align: center;
+    margin: 0; }
+.luodiye .form p .key {
+    font-size: 0.6rem;
+    color: #B88755;
+    line-height: 2rem;
+    display: inline-block;
+    width: 5rem;
+    display: none; }
+.luodiye .form p .text{
+	display: none
+}
+
+.luodiye .form p .jianf{
+	margin-left: 2rem;
+}
+
+.luodiye .form .tishi {
+    font-size: 0.6rem;
+    color: #B88755; }
+.luodiye .cc {
+    width: 100%; }
+
+
+.luodiye .cc h2 {
+    text-align: center;
+    font-size:0.6rem;
+    margin-top: 0.65rem;
+    color: #CC9F68;}
+
+.luodiye .cc h2 em {
+    display: inline-block;
+    width: 0.6rem;
+    height: 0.6rem;
+    background: url("https://imagecdn.xinyongjinku.com/app/images/dan.png") no-repeat center;
+    background-size: cover;
+    margin: 0 0.25rem -0.05rem 0; }
+.luodiye .cc .check em {
+    background: url("https://imagecdn.xinyongjinku.com/app/images/danz.png") no-repeat center;
+    background-size: cover; }
+
+.luodiye #footers{
+    width: 100%;
+    height:auto;
+    display:flex;
+    margin-top: -20px;
+    }
+.luodiye #footers div{
+flex:1;
+    text-align: center;
+    color:#B88755;
+}
+.luodiye #footers div img{
+    width:50%;
+    margin:0 auto;
+    display:block;
+}
+
+.luodiye .huoyan{
+	color: black;
+}
+.luodiye button {
+	width: 82.3%;
+	height: 12%;
+    margin: 2rem auto 0;
+    line-height: 2.3rem;
+    text-align: center;
+    border: none;
+    outline: none;
+    border-radius: 1.75rem;
+    background: url("https://imagecdn.xinyongjinku.com/app/images/bn_home.png") no-repeat center;
+    background-size: cover;
+    display: block;
+    font-size: 0.9rem;
+    color: #fff;
+    box-sizing: border-box; }
+.luodiye button:hover {
+    background: url("https://imagecdn.xinyongjinku.com/app/images/bb.png") no-repeat center;
+    background-size: cover;}
+.luodiye ::-webkit-input-placeholder {
+    font-size: 0.6rem;
+    color: #D8D8D8;
+    letter-spacing: 0; }
+
+/*# sourceMappingURL=luodiye.css.map */

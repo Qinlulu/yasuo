@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>信用金库</title>
+    <link href="./favicon.ico" rel="shortcut icon">
+    <link rel="stylesheet" href="https://imagecdn.xinyongjinku.com/app/css/reset.css">
+    <link rel="stylesheet" href="../css/newHtml@v1.3.0.css">
+</head>
+<script>
+  ;
+  (function(win, doc) {
+    function change() {
+      doc.documentElement.style.fontSize = 16 * doc.documentElement.clientWidth / 375 + 'px';
+    }
+    change();
+    win.addEventListener('resize', change, false);
+  })(window, document);
+</script>
+<script src="../js/sea@v1.2.5.js"></script>
+<script src="../js/sea-config@v1.2.5.js"></script>
+<script type="text/javascript">
+  seajs.use(['jquery'], function() {
+    seajs.use(['public', "template"], function() {
+      seajs.use(['newHtml']);
+    });
+  });
+</script>
+<body>
+<div class="newHtml">
+    <div class="head">
+        <div class="header">
+            <span class="back"><img src="https://imagecdn.xinyongjinku.com/wechat/modules/images/leftj.png" alt=""></span>
+            <span class="headt">通知详情</span>
+            <span></span>
+        </div>
+    </div>
+    <h3> </h3>
+    <p class="time"></p>
+    <div class="content"></div>
+</div>
+</body>
+</html>

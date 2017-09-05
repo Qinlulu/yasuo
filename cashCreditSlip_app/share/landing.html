@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>信用金库</title>
+    <link href="./favicon.ico" rel="shortcut icon">
+    <link rel="stylesheet" href="https://imagecdn.xinyongjinku.com/app/css/reset.css">
+    <link rel="stylesheet" href="../css/landing@v1.3.0.css">
+</head>
+<script>
+    ;
+    (function(win, doc) {
+        function change() {
+            doc.documentElement.style.fontSize = 20 * doc.documentElement.clientWidth / 375 + 'px';
+        }
+        change();
+        win.addEventListener('resize', change, false);
+    })(window, document);
+</script>
+<script src="../js/sea@v1.2.5.js"></script>
+<script src="../js/sea-config@v1.2.5.js"></script>
+<script type="text/javascript">
+    seajs.use(['jquery'], function() {
+        seajs.use(['public', "template"], function() {
+            seajs.use(['landing']);
+        });
+    });
+</script>
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?698bbbb3c428250312b0a677c9275fe9";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+<script type='text/javascript'>
+    var _vds = _vds || [];
+    window._vds = _vds;
+    (function(){
+        _vds.push(['setAccountId', 'a98841922f7223f2']);
+        (function() {
+            var vds = document.createElement('script');
+            vds.type='text/javascript';
+            vds.async = true;
+            vds.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'dn-growing.qbox.me/vds.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(vds, s);
+        })();
+    })();
+</script>
+<body>
+<div class="landing">
+    <div class="head">
+        <div class="heads">
+            <img src="https://imagecdn.xinyongjinku.com/app/images/yqzc_logo@v1.3.0.png" alt="">
+        </div>
+        <div class="tit">
+            信用金库  随时相助
+        </div>
+        <div class="prompt">
+            每一次你花的钱，都是在为你想要的世界投票，信用金库支撑你的梦想，1000元额度走起。信用金库实力放款。
+        </div>
+    </div>
+    <div class="center">
+        <div class="form">
+            <p><span><img src="https://imagecdn.xinyongjinku.com/app/images/yqzc_shoujihao_icon@v1.3.0.png" alt=""></span>
+                <input type="text" placeholder="请输入手机号码" id="phone">
+                <label class="key"></label>
+            </p>
+            <p>
+                <span><img src="https://imagecdn.xinyongjinku.com/app/images/yqzc_mima_icon@v1.3.0.png" alt=""></span>
+                <input type="password" placeholder="8-16位的字母及数字的组合" id="mis" class="lim pass">
+                <input type="text" placeholder="8-16位的字母及数字的组合" class="lim text">
+                <span class="jianf"> <img src="https://imagecdn.xinyongjinku.com/app/images/h@v1.2.5.png" alt=""></span>
+            </p>
+            <p><span><img src="https://imagecdn.xinyongjinku.com/app/images/yqzc_yanzhengma_icon@v1.3.0.png" alt=""></span>
+                <input type="text" placeholder="请输入验证码" id="yan">
+                <button class="huoyan">发送验证码</button>
+            </p>
+        </div>
+        <div class="cc">
+            <h2 class="check"><em></em><span>我已阅读并同意 <i onclick="window.location.href='https://www.xinyongjinku.com/app/xieyi/xieyi.html'" style="color: #a6b5e8">《信用金库注册协议》</i></span></h2>
+            <button class="luodishen">立即注册</button>
+        </div>
+    </div>
+</div>
+
+</body>
+
+</html>

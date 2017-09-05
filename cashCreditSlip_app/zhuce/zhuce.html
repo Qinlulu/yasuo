@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<title>注册</title>
+		<link href="./favicon.ico" rel="shortcut icon">
+		<link rel="stylesheet" href="https://imagecdn.xinyongjinku.com/app/css/reset.css">
+		<link rel="stylesheet" href="../css/zhuce@v1.2.6.css">
+	</head>
+	<script>
+		;
+		(function(win, doc) {
+			function change() {
+				doc.documentElement.style.fontSize = 20 * doc.documentElement.clientWidth / 375 + 'px';
+			}
+			change();
+			win.addEventListener('resize', change, false);
+		})(window, document);
+	</script>
+	<script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?fc4265da6351b2107dc3d224191b40bd";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+	</script>
+	<script src="../js/sea@v1.2.5.js"></script>
+	<script src="../js/sea-config@v1.2.5.js"></script>
+	<script type="text/javascript">
+		seajs.use(['jquery'], function() {
+			seajs.use(['public', "template"], function() {
+				seajs.use(['zhuce']);
+			});
+		});
+	</script>
+
+	<body>
+		<div class="luodiye">
+			<div class="banner">
+				<img src="https://imagecdn.xinyongjinku.com/app/images/banner.png" alt="" class="img">
+			</div>
+			<div class="center">
+				<div class="form">
+					<p><span><img src="https://imagecdn.xinyongjinku.com/app/images/phone.png" alt=""></span>
+						<input type="text" placeholder="请输入手机号码" id="phone">
+						<label class="key"></label>
+					</p>
+					<p><span><img src="https://imagecdn.xinyongjinku.com/app/images/ma.png" alt=""></span>
+						<input type="text" placeholder="手机验证码" id="yan">
+						<button class="huoyan">获取验证码</button>
+					</p>
+					<p>
+						<span><img src="https://imagecdn.xinyongjinku.com/app/images/mi.png" alt=""></span>
+					    <input type="password" placeholder="8-16位的字母及数字的组合" id="mis" class="lim pass">
+                        <input type="text" placeholder="8-16位的字母及数字的组合" class="lim text">
+                        <span class="jianf"> <img src="https://imagecdn.xinyongjinku.com/app/images/h@v1.2.5.png" alt=""></span>
+					</p>
+					<label class="tishi"></label>
+				</div>
+				<div class="cc">
+					<button class="luodishen">立即申请</button>
+					<h2 class="check"><em></em><span>同意 <i onclick="window.location.href='https://www.xinyongjinku.com/app/xieyi/xieyi.html'" style="color: #a6b5e8">《信用金库注册协议》</i></span></h2>
+				</div>
+			</div>
+
+			<div id="footers">
+				<div><img src="https://imagecdn.xinyongjinku.com/app/images/one.png" alt="">
+				<p>申请简单</p>
+				</div>
+				<div><img src="https://imagecdn.xinyongjinku.com/app/images/two.png" alt="">
+					<p>极速审核</p>
+				</div>
+				<div><img src="https://imagecdn.xinyongjinku.com/app/images/three.png" alt="">
+					<p>闪电到账</p>
+				</div>
+			</div>
+
+		</div>
+
+	</body>
+
+</html>

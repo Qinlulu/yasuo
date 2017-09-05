@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<title>注册</title>
+		<link rel="stylesheet" href="https://imagecdn.xinyongjinku.com/app/css/reset.css">
+		<link rel="stylesheet" href="../css/zhuce@v1.2.5.css">
+	</head>
+	<style>
+		body .luodiye .center{
+			margin:-0.35rem auto 0;
+		}
+		.center img{
+			width:100%;
+		}
+	</style>
+	<script>
+		;
+		(function(win, doc) {
+			function change() {
+				doc.documentElement.style.fontSize = 20 * doc.documentElement.clientWidth / 375 + 'px';
+			}
+			change();
+			win.addEventListener('resize', change, false);
+		})(window, document);
+	</script>
+	<script src="../js/sea@v1.2.5.js"></script>
+	<script src="../js/sea-config@v1.2.5.js"></script>
+	<script type="text/javascript">
+		seajs.use(['jquery'], function() {
+			seajs.use(['public', "template"], function() {
+				seajs.use(['zjiayou']);
+			});
+		});
+	</script>
+
+	<body>
+		<div class="luodiye">
+			<div class="banner">
+				<img src="../images/bei2@v1.3.4.png" alt="" class="img">
+			</div>
+			<div class="center">
+				<img src="../images/beis@v1.3.3.png" alt="">
+			</div>
+
+			<div id="footers">
+				<img src="../images/bei@v1.3.4.png" alt="">
+			</div>
+
+		</div>
+
+	</body>
+
+</html>

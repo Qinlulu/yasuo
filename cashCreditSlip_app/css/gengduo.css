@@ -1,0 +1,16 @@
+.gengduo {
+    width: 100%;
+    height: 100%;
+    position:absolute;
+    background: #FFFBEC;
+}
+.atust{
+    background: #FFD630;
+}
+.gengduo  .img {
+     width: 100%;
+ }
+.gengduo  .img  img{
+    width: 100%;
+}
+
