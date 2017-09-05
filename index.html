@@ -1,88 +1,93 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta name="format-detection" content="telephone=no, email=no" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>信用金库</title>
-    <link href="./favicon.ico" rel="shortcut icon">
-   <!-- <link rel="stylesheet" href="modules/css/reset.css">
-    <link rel="stylesheet" href="modules/css/page.css">-->
-    <link rel="stylesheet" href="modules/css/main.css">
-    <script type="text/javascript" src="lib/require.js" data-main="main.js"></script>
-    <script src="https://qiyukf.com/script/9a474ba2454aa785b874db5dabb741bd.js" defer async></script>
-    <script type="text/javascript">
-        ;(function (win, doc) {
-            function change() {
-                doc.documentElement.style.fontSize = 16 * doc.documentElement.clientWidth / 375 + 'px';
-            }
-            change();
-            win.addEventListener('resize', change, false);
-        })(window, document);
-    </script>
-    <script>
-        var _hmt = _hmt || [];
-        (function() {
-            var hm = document.createElement("script");
-            hm.src = "https://hm.baidu.com/hm.js?2d3bbffec85b998796a37b2bb7224d9c";
-            var s = document.getElementsByTagName("script")[0];
-            s.parentNode.insertBefore(hm, s);
-        })();
-    </script>
-    <script>
-        var _hmt = _hmt || [];
-        (function() {
-            var hm = document.createElement("script");
-            hm.src = "https://hm.baidu.com/hm.js?fc4265da6351b2107dc3d224191b40bd";
-            var s = document.getElementsByTagName("script")[0];
-            s.parentNode.insertBefore(hm, s);
-        })()
-    </script>
+    <meta charset="utf-8">
+    <title>Swiper demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="./Swiper-3.4.2/dist/css/swiper.min.css">
+    <!-- Demo styles -->
+    <style>
+        html, body {
+            position: relative;
+            height: 100%;
+        }
+        body {
+            background: #eee;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            color:#000;
+            margin: 0;
+            padding: 0;
+        }
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+        }
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+        .swiper-container-v {
+            background: #eee;
+        }
+    </style>
 </head>
 <body>
-<div class="main"></div>
-<div class="donghua">
-    <div class="loading">
-        <div class="i0">
-            <span class="s0"></span>
+<!-- Swiper -->
+<div class="swiper-container swiper-container-h">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">Horizontal Slide 1</div>
+        <div class="swiper-slide">
+            <div class="swiper-container swiper-container-v">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">Vertical Slide 1</div>
+                    <div class="swiper-slide">Vertical Slide 2</div>
+                    <div class="swiper-slide">Vertical Slide 3</div>
+                    <div class="swiper-slide">Vertical Slide 4</div>
+                    <div class="swiper-slide">Vertical Slide 5</div>
+                </div>
+                <div class="swiper-pagination swiper-pagination-v"></div>
+            </div>
         </div>
-        <div class="i1">
-            <span class="s1"></span>
-        </div>
-        <div class="i2">
-            <span class="s2"></span>
-        </div>
-        <div class="i3">
-            <span class="s3"></span>
-        </div>
-        <div class="i4">
-            <span class="s4"></span>
-        </div>
-        <div class="i5">
-            <span class="s5"></span>
-        </div>
-        <div class="i6">
-            <span class="s6"></span>
-        </div>
-        <div class="i7">
-            <span class="s7"></span>
-        </div>
-        <div class="i8">
-            <span class="s8"></span>
-        </div>
-        <div class="i9">
-            <span class="s9"></span>
-        </div>
-        <div class="i10">
-            <span class="s10"></span>
-        </div>
+        <div class="swiper-slide">Horizontal Slide 3</div>
+        <div class="swiper-slide">Horizontal Slide 4</div>
     </div>
-    <div class="tishi">
-    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination swiper-pagination-h"></div>
 </div>
-<footer></footer>
-<script type="text/javascript" src="https://webapi.amap.com/maps?v=1.3&key=25687a70c3fa2f36d2719d0fc97aad80&plugin=AMap.Geocoder"></script>
+
+<!-- Swiper JS -->
+<script src="./Swiper-3.4.2/dist/js/swiper.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+    var swiperH = new Swiper('.swiper-container-h', {
+        pagination: '.swiper-pagination-h',
+        paginationClickable: true,
+        spaceBetween: 50
+    });
+    var swiperV = new Swiper('.swiper-container-v', {
+        pagination: '.swiper-pagination-v',
+        paginationClickable: true,
+        direction: 'vertical',
+        spaceBetween: 50
+    });
+</script>
 </body>
 </html>
