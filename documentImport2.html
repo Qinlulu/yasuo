@@ -1,0 +1,255 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>文件</title>
+    <script src="http://static.runoob.com/assets/vue/1.0.11/vue.min.js"></script>
+    <script src="https://cdn.bootcss.com/vue-resource/1.3.4/vue-resource.min.js"></script>
+    <style>
+        #data-import {
+            width: 800px;
+            height: 500px;
+            margin: 0 auto;
+            border: 1px solid #ccc;
+        }
+
+        .select-date {
+            margin: 0 auto;
+            width: 500px;
+
+        }
+
+        .reminder-box {
+            width: 100%;
+            box-sizing: border-box;
+            border-bottom: 1px solid #ccc;
+            height: 150px;
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        body button {
+            margin: 10px;
+            background-color: #ffffff;
+        }
+
+        body span {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        body .date select {
+            width: 100px;
+            height: 30px;
+            margin-bottom: 20px;
+        }
+
+        #overlay {
+            background: #000;
+            filter: alpha(opacity=50); /* IE的透明度 */
+            opacity: 0.5; /* 透明度 */
+            display: none;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            z-index: 100; /* 此处的图层要大于页面 */
+            display: none;
+            _background-color: #a0a0a0; /* 解决IE6的不透明问题 */
+        }
+    </style>
+</head>
+
+<body>
+<div id="data-import">
+    <div class="reminder-box">
+        <h1>微信榜单导入工具</h1>
+        <p v-if="male">{{message}}</p>
+    </div>
+    <div class="select-date">
+        <div class="date">
+            <span>选择时间:</span>
+            <select v-model="yearData">
+                <option v-for="(item,index) in [2017,2018]" v-bind:value="index">{{ index }}</option>
+            </select>
+            <select v-model="monthData">
+                <option v-for="month in 12" v-bind:value="month+1">{{ month+1 }}</option>
+            </select>
+            <select v-model="dayData">
+                <option v-for="day in 31" v-bind:value="day+1">{{ day+1 }}</option>
+            </select>
+        </div>
+        <div class="vchat" v-for="(item,index) in disabledboxList">
+            <span>{{index[0]}}</span>
+            <button v-for="(items,indexs) in index[1]"
+                    :disabled="loading isDisabled[items]"
+                    @click="getDate(items)">
+                {{indexs.data}}
+            </button>
+        </div>
+
+       <!-- <div class="vchat">
+            <span>公众号：</span>
+            <button :disabled="loading" @click="getDate('day','loading')">按天导入</button>
+            <button :disabled="loading1" @click="getDate('week','loading1')">按周导入</button>
+            <button :disabled="loading2" @click="getDate('month','loading2')">按月导入</button>
+        </div>
+        <div class="vchat">
+            <span>文章：</span>
+            <button :disabled="loading3" @click="getDate('articleDay','loading3')">按天导入</button>
+            <button :disabled="loading4" @click="getDate('articleWeek','loading4')">按周导入</button>
+            <button :disabled="loading5" @click="getDate('articleMonth','loading5')">按月导入</button>
+        </div>-->
+        <div id="overlay"></div>
+    </div>
+</div>
+
+
+</body>
+<script>
+    new Vue({
+        el: '#data-import',
+        data: {
+            yearData: 2017,
+            monthData: 1,
+            dayData: 1,
+            male: false,
+            message: '正在请求中……',
+            disabledboxList: [
+                ["公众号", [
+                    {
+                        "type":"day",
+                        "data":"按天导入",
+                    },{
+                        "type":"week",
+                        "data":"按周导入",
+                    },{
+                        "type":"month",
+                        "data":"按月导入",
+                    }
+                ]],
+                ["文章", [
+                    {
+                        "type":"articleDay",
+                        "data":"按天导入",
+                    },{
+                        "type":"articleWeek",
+                        "data":"按周导入",
+                    },{
+                        "type":"articleMonth",
+                        "data":"按月导入",
+                    }
+                ]]
+            ],
+            loading: false,
+            isDisabled: [false, false, false, false, false, false],
+            apis:[
+                {url: 'http://www.51neirong.com/Work.php?m=Wechatrank&a=getdateday', method: 'POST'},
+                {url: 'http://www.51neirong.com/work-Home-Wechatrank-getdataweek.html', method: 'GET'},
+                {url: 'http://www.51neirong.com/Work.php?m=Wechatrank&a=getdatamonths', method: 'GET'},
+                {url: 'http://www.51neirong.com/Work.php?m=Wechatrank&a=getarticleday', method: 'POST'},
+                {url: 'http://www.51neirong.com/Work.php?m=Wechatrank&a=getarticleweek', method: 'GET'},
+                {url: 'http://www.51neirong.com/Work.php?m=Wechatrank&a=getarticlemonth', method: 'GET'},
+            ]
+        },
+        components: {},
+        methods: {
+            getDate: function (type, event) {
+                //console.log(this.yearData)
+                alert("d")
+                console.log(type)
+                this.loading = true;
+                this.loading1 = true;
+                this.loading2 = true;
+                this.loading3 = true;
+                this.loading4 = true;
+                this.loading5 = true;
+                this.loading6 = true;
+                this.male = true;
+                let _item = {};
+                switch (type) {
+                    case 'day':
+                        _item.url = 'http://www.51neirong.com/Work.php?m=Wechatrank&a=getdateday';
+                        _item.type = 'POST'
+                        break;
+                    case 'week':
+                        _item.url = 'http://www.51neirong.com/work-Home-Wechatrank-getdataweek.html';
+                        _item.type = 'GET'
+                        break;
+                    case 'month':
+                        _item.url = 'http://www.51neirong.com/Work.php?m=Wechatrank&a=getdatamonths';
+                        _item.type = 'GET'
+                        break;
+                    case 'articleDay':
+                        _item.url = 'http://www.51neirong.com/Work.php?m=Wechatrank&a=getarticleday';
+                        _item.type = 'POST'
+                        break;
+                    case 'articleWeek':
+                        _item.url = 'http://www.51neirong.com/Work.php?m=Wechatrank&a=getarticleweek';
+                        _item.type = 'GET'
+                        break;
+                    case 'articleMonth':
+                        _item.url = 'http://www.51neirong.com/Work.php?m=Wechatrank&a=getarticlemonth';
+                        _item.type = 'GET'
+                        break;
+                }
+                let param = _item['type'] === 'GET' ? {} : {
+                    year: this.yearData,
+                    month: this.monthData,
+                    day: this.dayData
+                };
+                if (_item['type'] === 'GET') {
+                    this.$http.get(_item['url'], param, {emulateJSON: true}).then((data) => {
+                        this.request(data, event);
+                    })
+                } else {
+                    this.$http.post(_item['url'], param, {emulateJSON: true}).then((data) => {
+                        this.request(data, event);
+                    })
+                }
+            },
+            request: function (data, event) {
+                if (data.body.code === 0) {
+                    this.yearData = 2017;
+                    this.monthData = 1;
+                    this.dayData = 1;
+                    this.male = false
+                    alert(data.body.msg);
+                } else {
+                    alert("操作失败");
+                }
+                this.loading = false;
+                this.loading1 = false;
+                this.loading2 = false;
+                this.loading3 = false;
+                this.loading4 = false;
+                this.loading5 = false;
+                this.loading6 = false;
+                this.arr.push(event)
+                for (let k = 0; k < this.arr.length; k++) {
+                    if (this.arr[k] == 'loading') {
+                        this.loading = true;
+                    } else if (this.arr[k] == 'loading1') {
+                        this.loading1 = true;
+                    } else if (this.arr[k] == 'loading2') {
+                        this.loading2 = true;
+                    } else if (this.arr[k] == 'loading3') {
+                        this.loading3 = true;
+                    } else if (this.arr[k] == 'loading4') {
+                        this.loading4 = true;
+                    } else if (this.arr[k] == 'loading5') {
+                        this.loading5 = true;
+                    } else if (this.arr[k] == 'loading6') {
+                        this.loading6 = true;
+                    }
+                }
+            }
+        },
+    })
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    let _forwardFans = [
+        {
+            "name": "2017旅行日记",
+            "followers_count": 86
+        },
+        {
+            "name": "阿-小-怪",
+            "followers_count": 149
+        },
+        {
+            "name": "任性着-骄傲着",
+            "followers_count": 65
+        },
+        {
+            "name": "阿-小-怪",
+            "followers_count": 149
+        }
+    ]
+
+    var newObj=[];
+
+    for( var i in _forwardFans){
+        newObj.push(_forwardFans[i].name)
+    }
+
+    var newAt=[];
+    var newOB=[];
+
+    for(var i=0;i<newObj.length;i++){
+        if(newAt.indexOf(newObj[i])<0){
+            newAt.push(newObj[i])
+            newOB.push(_forwardFans[i])
+        }
+    }
+    console.log(newOB)
+</script>
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--<script src="http://static.runoob.com/assets/vue/1.0.11/vue.min.js"></script>
+    <script src="https://cdn.bootcss.com/vue-resource/1.3.4/vue-resource.min.js"></script>-->
+    <script src="https://unpkg.com/vue"></script>
+    <title>Document</title>
+</head>
+<body>
+<div id="app">
+    <div>
+        <p>
+            {{checkList}}
+        </p>
+        <p>
+            <input type="checkbox" id="all" @click="checkAll" v-model="isCheckAll"/>
+            <label for="all">全选</label>
+        </p>
+        <span v-for="(item,index) in checkboxList" >
+         <input type="checkbox" :id="item" @click="checked(item)" :checked="checkList.indexOf(item)>-1"/><label
+                :for="item">{{item}}</label>
+        </span>
+    </div>
+</div>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            checkboxList: ['A', 'B', 'C'],
+            checkList: [],
+            isCheckAll: false,
+        },
+       //监听事件
+       watch: {
+            checkList: function (val) {
+                if (val.length === this.checkboxList.length) {
+                    this.isCheckAll = true
+                } else {
+                    this.isCheckAll = false
+                }
+            }
+        },
+        //js 的事件处理
+        methods: {
+            checkAll() {
+                if (this.isCheckAll) {
+                    //将对象 进行合并 操作   会改变原值对象
+                    Object.assign(this.checkList, this.checkboxList)
+                } else {
+                    this.checkList = []
+                }
+            },
+            checked(item) {
+                if (this.checkList.indexOf(item) > -1) {
+                    let index = this.checkList.indexOf(item)
+                    //删除某个等同下标的值
+                    this.checkList.splice(index, 1)
+                } else {
+                    this.checkList.push(item)
+                }
+            }
+        }
+    })
+</script>
+
+</body>
+</html>
+<!--
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>文件</title>
+    <script src="http://static.runoob.com/assets/vue/1.0.11/vue.min.js"></script>
+    <script src="https://cdn.bootcss.com/vue-resource/1.3.4/vue-resource.min.js"></script>
+    <style>
+        #select-date {
+            margin: 0 auto;
+        }
+
+        body button {
+            margin: 10px;
+            background-color: #ffffff;
+        }
+
+        body span {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        body .date select {
+            width: 100px;
+            height: 30px;
+            margin-bottom: 20px;
+        }
+
+        #overlay {
+            background: #000;
+            filter: alpha(opacity=50); /* IE的透明度 */
+            opacity: 0.5; /* 透明度 */
+            display: none;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            z-index: 100; /* 此处的图层要大于页面 */
+            display: none;
+            _background-color: #a0a0a0; /* 解决IE6的不透明问题 */
+        }
+    </style>
+</head>
+
+<body>
+<div id="select-date">
+    <div class="date">
+        <span>选择时间:</span>
+        <select v-model="yearData">
+            <option v-for="(item,index) in [2017,2018]" v-bind:value="index">{{ index }}</option>
+        </select>
+        <select v-model="monthData">
+            <option v-for="month in 12" v-bind:value="mo&lt;!&ndash;&ndash;&gt;nth+1">{{ month+1 }}</option>
+        </select>
+        <select v-model="dayData">
+            <option v-for="day in 31" v-bind:value="day+1">{{ day+1 }}</option>
+        </select>
+    </div>
+    <div class="vchat">
+        <span>公众号：</span>
+        <button :disabled="loading" @click="getDate('day')">按天导入</button>
+        <button :disabled="loading" @click="getDate('week')">按周导入</button>
+        <button :disabled="loading">按月导入</button>
+    </div>
+    <div class="article">
+        <span>文章：</span>
+        <button :disabled="loading">按天导入</button>
+        <button :disabled="loading">按周导入</button>
+        <button :disabled="loading">按月导入</button>
+    </div>
+    <div id="overlay"></div>
+</div>
+
+</body>
+<script>
+    new Vue({
+        el: '#select-date',
+        data: {
+            yearData: 2017,
+            monthData: 1,
+            dayData: 1,
+            loading: false
+        },
+        components: {},
+        methods: {
+            getDate: function (type) {
+                //console.log(this.yearData)
+                console.log(type)
+                let param = {}
+                let _item = {};
+                switch (type) {
+                    case 'day':
+                        _item.url = 'http://www.51neirong.com/Work.php?m=Wechatrank&a=getdateday';
+                        _item.type = 'post'
+                        break;
+                    case 'week':
+                        _item.url = 'http://www.51neirong.com/work-Home-Wechatrank-getdataweek.html';
+                        _item.type = 'get'
+                        break;
+                }
+
+                param = _item.type === 'get' ? {} : {
+                    year: this.yearData,
+                    month: this.monthData,
+                    day: this.dayData
+                }
+
+                this.$http({
+                    method:_item['type'],
+                    utl:_item['url'],
+                    data:param
+
+                }).then((data) => {
+                    if (data.body.code === 0) {
+                        alert(data.body.msg);
+                        this.yearData = 2017;
+                        this.monthData = 1;
+                        this.dayData = 1;
+                    }
+                })
+            },
+        },
+    })
+
+
+</script>
+</body>
+</html>
+-->
